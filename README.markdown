@@ -1,12 +1,14 @@
 # Dafuscator
 
-Scutex, pronounced (sec-u-techs), is a 100% managed .Net Framework licensing platform for your applications. Scutex is a flexible licensing system providing multiple licensing schemes allowing you the most control over how you license your products. Unlike any other licensing system on the market, Scutex provides 4 distinct licensing schemes, allowing you to protect your products at different levels using completely different licensing schemes, key types and protection systems.
-
-Using Scutex you can create trial versions of your software products and allow your users to buy and use license keys or keyfiles to unlock your product. You can also have edition based licensing to unlock only select features based on the level of the license. Scutex supports upgrade licenses as well as allowing your customers who have an existing version of your product to upgrade to a new version.
+Dafuscator is a database data obfuscation system that allows you to tactically obfuscate or delete data out of your production database while leaving most of the data intact. Real data behaves differently than fake generated data, so when testing, performing QA or sending a database off to a 3rd party for testing you can maintain Sarbanes–Oxley and HIPPA compliance by changing PIA (Personally Identifiable Information) while still keeping most data intact for testing or analysis.
 
 ## License
 
 Licensed under the Microsoft Public License (MS-PL)
+
+## Development
+
+Dafuscator was developed in cooperation with Online Advisors, Inc. (<http://www.onlineadvisrs.co>)
 
 ## Resources
 
