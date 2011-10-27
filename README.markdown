@@ -19,102 +19,102 @@ You will need the .Net Framework 4 and Database to use Dafuscator.
 
 ## Provided Generators
 
-* Account Number 
+* **Account Number** 
 An account number that could be used to replace an external or internal account number 
-G5B-2M1QU1F 
+ (Example: G5B-2M1QU1F)
 
-* Address 
+* **Address** 
 Can generate 3 address lines (Street, Suite and C/O) 
-3127 Lafayette Walk
+ (Example: 3127 Lafayette Walk)
  
-* Character 
+* **Character** 
 Random single character generator 
-Z 
+ (Example: Z)
 
-* City Name 
+* **City Name** 
 Real city names from the United States 
-Truesdale 
+ (Example: Truesdale) 
 
-* Company Name 
+* **Company Name** 
 Generates a real looking company name with optional suffix (Inc, LLC, PLC, etc) 
-Microcada L.L.C. 
+ (Example: Microcada L.L.C.) 
 
-* Country 
+* **Country**
 Real country names 
-Honduras 
+ (Example: Honduras)
 
-* Date 
+* **Date** 
 Generate a random date within a range 
-10/5/1986 
+ (Example: 10/5/1986) 
 
-* Email Address 
+* **Email Address** 
 Real looking email address 
-pBlevins@Ventureloft.net 
+ (Example: pBlevins@Ventureloft.net) 
 
-* First Name 
+* **First Name** 
 String 
-Cori 
+ (Example: Cori)
 
-* Last Name 
+* **Last Name** 
 String 
-Pressman 
+ (Example: Pressman) 
 
-* Login 
+* **Login** 
 Unique, realistic login name generator 
-AObando187 
+ (Example: AObando187) 
 
-* Number 
+* **Number** 
 Random Number Generator 
-19875 
+ (Example: 19875) 
 
-* Phone Number 
+* **Phone Number** 
 Phone number generator with optional area code 
-597-458-1974 
+ (Example: 597-458-1974) 
 
-* Social Security Number 
+* **Social Security Number** 
 Generates an invalid, but real looking SSN 
-937-58-0360 
+ (Example: 937-58-0360) 
 
-* State 
+* **State** 
 Real state names 
-Nevada 
+ (Example: Nevada) 
 
-* String 
+* **String** 
 Random Strings (Character, Numbers and Special Characters) 
-eFRmdMGj 
+ (Example: eFRmdMGj) 
 
-* Url 
+* **Url** 
 Top Level Domain Url generator, human readable and real looking 
-www.Graynet.org 
+ (Example: www.Graynet.org) 
 
-* Zip Code (Postal Code) 
+* **Zip Code (Postal Code)** 
 Zip codes and optional 4 digit suffix 
-23341-1377 
+ (Example: 23341-1377) 
 
-* Clear (Eraser) 
+* **Clear (Eraser)** 
 Replaces data with empty strings or NULL 
-""/NULL 
+ (Example: ""/NULL)
 
-* Full Name 
+* **Full Name** 
 Full real name with optional middle initial or full middle name 
-Maira Nidia Lamothe 
+ (Example: Maira Nidia Lamothe)
 
-* Stock Symbol 
+* **Stock Symbol** 
 Real stock symbol generator from multiple exchanges (Equities, Indexes, ETF's, Funds) 
-ASCRX 
+ (Example: ASCRX) 
 
-* Stock Name 
+* **Stock Name** 
 Equity, Index, ETF and Fund names from multiple exchanges 
-Lodgian Inc. 
+ (Example: Lodgian Inc.) 
 
-* Hex 
+* **Hex**
 Random Hex Generator 
-0xF31A59D 
+ (Example: 0xF31A59D) 
 
-* Guid 
+* **Guid** 
 Random Guid Generator 
-{21EC2020-3AEA-1069-A2DD-08002B30309D} 
+ (Example: {21EC2020-3AEA-1069-A2DD-08002B30309D})
 
-* Token 
+* **Token** 
 Generates a string given a user supplied pattern 
-{random}
+ (Example: {random})
