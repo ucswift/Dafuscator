@@ -1,0 +1,57 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:local="clr-namespace:WaveTech.Dafuscator.WpfApplication"  
+				xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mwt="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero"
+				xmlns:sel="clr-namespace:WaveTech.Dafuscator.WpfApplication.DataTemplateSelectors"
+				xmlns:model="clr-namespace:WaveTech.Dafuscator.Model;assembly=WaveTech.Dafuscator.Model"
+				xmlns:classes="clr-namespace:WaveTech.Dafuscator.WpfApplication.Classes"
+				xmlns:odc="clr-namespace:Odyssey.Controls;assembly=Odyssey" 
+				xmlns:Converter="clr-namespace:WaveTech.Dafuscator.WpfApplication.Converter" 
+				xmlns:System="clr-namespace:System;assembly=mscorlib">
+
+	<Converter:NullToVisibleConverter x:Key="nullToVisibleConverter" />
+	<Converter:VisibilityConverter x:Key="visibilityConverter" />
+	<Converter:ImageConverter x:Key="imageConverter" />
+	<Converter:FieldTypeConverter x:Key="fieldTypeConverter" />
+	<Converter:NullToBoolConverter x:Key="nullToBoolConverter" />
+	<Converter:CountConverter x:Key="countConverter" />
+	<Converter:DateConverter x:Key="dateConverter" />
+	<Converter:TimeConverter x:Key="timeConverter" />
+	<Converter:IntConverter x:Key="intConverter" />
+	<Converter:TreeViewActiveColorConverter x:Key="treeViewActiveColorConverter" />
+	<Converter:RoundedCornerConverter x:Key="roundedCornerConverter" />
+	<Converter:NullableColumnConverter x:Key="nullableColumnConverter" />
+	<Converter:NullableColumnTooltipConverter x:Key="nullableColumnTooltipConverter" />
+	<Converter:ColumnTypeConverter x:Key="columnTypeConverter" />
+	<Converter:ColumnTypeTooltipConverter x:Key="columnTypeTooltipConverter" />
+	
+	<Converter:FirstGeneraterDataConverter x:Key="firstGeneraterDataConverter" />
+
+	<sel:ColumnFieldSelector x:Key="columnFieldSelector" />
+
+	<classes:UIContext x:Key="dataContext" />
+
+	<ObjectDataProvider x:Key="databaseData" ObjectInstance="{StaticResource dataContext}" MethodName="GetDatabase"
+            IsAsynchronous="False"  IsInitialLoadEnabled="False" />
+
+    <ObjectDataProvider x:Key="generatorData" ObjectInstance="{StaticResource dataContext}" MethodName="GetGenerators"
+            IsAsynchronous="False"  IsInitialLoadEnabled="False" />
+	
+	<ObjectDataProvider x:Key="tableHandlerTypesEnumData" MethodName="GetValues" ObjectType="{x:Type System:Enum}" >
+		<ObjectDataProvider.MethodParameters>
+			<x:Type TypeName="model:TableHandlerTypes" />
+		</ObjectDataProvider.MethodParameters>
+	</ObjectDataProvider>
+
+	<HierarchicalDataTemplate x:Key="tableItemTemplate" DataType="{x:Type model:Table}" ItemsSource="{Binding Tables}">
+		<DockPanel HorizontalAlignment="Stretch">
+			<Image DockPanel.Dock="Left" Source="{Binding Converter={StaticResource imageConverter}}" Width="16"
+                    Height="16" Stretch="Fill" VerticalAlignment="Center" />
+
+			<TextBlock Text="{Binding FullTableName}" Margin="0,0,4,0"
+                    Foreground="{Binding AreAnyGeneratorsActive, Converter={StaticResource treeViewActiveColorConverter}, Mode=OneWay}" />
+		</DockPanel>
+	</HierarchicalDataTemplate>
+
+
+</ResourceDictionary>

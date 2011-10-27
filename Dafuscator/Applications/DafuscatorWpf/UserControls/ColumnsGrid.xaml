@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="WaveTech.Dafuscator.WpfApplication.UserControls.ColumnsGrid"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:odc="clr-namespace:Odyssey.Controls;assembly=Odyssey"
+		x:Name="columnsGrid">
+    <UserControl.Resources>
+	<ResourceDictionary>
+		<ResourceDictionary.MergedDictionaries>
+			<ResourceDictionary Source="/DataTemplates.xaml" />
+		</ResourceDictionary.MergedDictionaries>
+	</ResourceDictionary>
+	</UserControl.Resources>
+	<Grid Grid.Column="1" Grid.Row="1" Focusable="False">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="20" />
+			<RowDefinition Height="Auto" />
+			<RowDefinition />
+		</Grid.RowDefinitions>
+		<Grid Focusable="False" Grid.Row="1">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="225" />
+				<ColumnDefinition Width="80" />
+				<ColumnDefinition Width="80" />
+				<ColumnDefinition Width="100" />
+				<ColumnDefinition MinWidth="100" Width="*" />
+			</Grid.ColumnDefinitions>
+
+			<TextBlock Text="{Binding SelectedTable.FullTableName, ElementName=columnsGrid, Mode=OneWay}" Grid.Column="0" VerticalAlignment="Center" />
+			
+			<TextBlock Text="Row Count:" Grid.Column="1" VerticalAlignment="Center" />
+			<TextBlock x:Name="txtTableRecordCount" Text="{Binding SelectedTable.RecordCount, ElementName=columnsGrid, Mode=OneWay}" Grid.Column="2" VerticalAlignment="Center" />
+			
+			<TextBlock Text="Table Handler:" Grid.Column="3" VerticalAlignment="Center" />
+			<ComboBox x:Name="cboTableHandlerType" ItemsSource="{Binding Source={StaticResource tableHandlerTypesEnumData}}" Grid.Row="1" Grid.Column="4"
+											 SelectedValue="{Binding SelectedTable.HandlerType, ElementName=columnsGrid, Mode=TwoWay}" HorizontalContentAlignment="Stretch" Focusable="True" Margin="2,2,0,2" />
+		</Grid>
+		<Grid Focusable="False" Grid.Row="2">
+			<Border Margin="0,4,2,4" Focusable="False" Background="#60FFFFFF" BorderThickness="1"
+							BorderBrush="{DynamicResource {ComponentResourceKey odc:Skins, BorderBrush}}">
+				<Grid Visibility="{Binding Converter={StaticResource nullToVisibleConverter}}" Focusable="False">
+					<ScrollViewer CanContentScroll="True" HorizontalScrollBarVisibility="Disabled"  Focusable="False"
+                            VerticalScrollBarVisibility="Auto" HorizontalContentAlignment="Stretch" 
+														odc:RibbonOption.AnimateTransition="True">
+						<ItemsControl x:Name="ColumnListControl" Margin="0" Background="Transparent" Focusable="False" 
+																ItemsSource="{Binding Columns}"
+                                DataContext="{Binding SelectedTable, ElementName=columnsGrid}" HorizontalContentAlignment="Stretch"
+                                ItemTemplateSelector="{StaticResource columnFieldSelector}"
+																VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+							<ItemsControl.ItemContainerStyle>
+								<Style TargetType="FrameworkElement">
+									<Setter Property="Focusable" Value="False" />
+								</Style>
+							</ItemsControl.ItemContainerStyle>
+							<ItemsControl.ItemsPanel>
+								<ItemsPanelTemplate>
+									<StackPanel Margin="0,10,0,10" />
+								</ItemsPanelTemplate>
+							</ItemsControl.ItemsPanel>
+						</ItemsControl>
+					</ScrollViewer>
+				</Grid>
+			</Border>
+		</Grid>
+	</Grid>
+</UserControl>

@@ -1,0 +1,108 @@
+﻿<ResourceDictionary 
+				xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+				xmlns:local="clr-namespace:WaveTech.Dafuscator.WpfApplication"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+				xmlns:model="clr-namespace:WaveTech.Dafuscator.Model;assembly=WaveTech.Dafuscator.Model"
+        xmlns:odc="clr-namespace:Odyssey.Controls;assembly=Odyssey"
+        xmlns:UserControls="clr-namespace:WaveTech.Dafuscator.WpfApplication.UserControls">
+
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary Source="/DataTemplates.xaml" />
+	</ResourceDictionary.MergedDictionaries>
+
+	<DataTemplate x:Key="NormalColumn" DataType="{x:Type model:Column}">
+		<Grid Margin="5,0,5,0" Focusable="False">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="280" />
+                <ColumnDefinition Width="40" />
+				<ColumnDefinition Width="20" />
+				<ColumnDefinition Width="20" />
+				<ColumnDefinition Width="20" />
+				<ColumnDefinition MinWidth="100" Width="*" />
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+			</Grid.RowDefinitions>
+
+			<Separator Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" HorizontalAlignment="Stretch" Focusable="False" Height="10" VerticalAlignment="Center" x:Name="firstSep" />
+
+			<Label Content="{Binding Name}" Grid.Row="1" Grid.Column="0"/>
+
+            <TextBlock Text="{Binding MaxLength}" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            <Image Grid.Row="1" Grid.Column="2" Source="{Binding .,Path=DataType,Converter={StaticResource columnTypeConverter}}"
+						 ToolTip="{Binding .,Path=DataType,Converter={StaticResource columnTypeTooltipConverter}}" />
+
+			<Image Grid.Row="1" Grid.Column="3" Source="{Binding .,Path=IsNullable,Converter={StaticResource nullableColumnConverter}}" 
+						 ToolTip="{Binding .,Path=IsNullable,Converter={StaticResource nullableColumnTooltipConverter}}" />
+			
+			<Image Grid.Row="1" Grid.Column="4" ToolTip="This column has a constraint." Source="img/warning_16.png" Visibility="{Binding .,Path=IsPartOfConstraint,Converter={StaticResource visibilityConverter}}"/>
+
+			<ComboBox ItemsSource="{Binding Source={StaticResource generatorData}}" DisplayMemberPath="Name" SelectedValuePath="Id" Grid.Row="1" Grid.Column="5"
+											 SelectedValue="{Binding GeneratorType,Mode=TwoWay}" HorizontalContentAlignment="Stretch" Focusable="True" Margin="2,2,0,2" />
+
+			<UserControls:GeneratorOptions Grid.Row="2" Grid.Column="5"  GeneratorType="{Binding GeneratorType,Mode=OneWay}" 
+											GeneratorData="{Binding GeneratorData,Mode=TwoWay}" Column="{Binding .,Mode=TwoWay}" />
+		</Grid>
+	</DataTemplate>
+
+	<DataTemplate x:Key="PrimaryKeyColumn" DataType="{x:Type model:Column}">
+		<Grid Margin="5,0,5,0" Focusable="False">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="360" />
+				<ColumnDefinition MinWidth="100" Width="*" />
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+			</Grid.RowDefinitions>
+
+			<Separator Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Focusable="False" Height="10" VerticalAlignment="Center" x:Name="firstSep" />
+
+			<Label Content="{Binding Name}" Grid.Row="1" Grid.Column="0" Foreground="Azure"/>
+
+			<Label Content="Primary Key Column" Grid.Row="1" Grid.Column="1" Foreground="Azure"/>
+		</Grid>
+	</DataTemplate>
+
+	<DataTemplate x:Key="ForignKeyColumn" DataType="{x:Type model:Column}">
+		<Grid Margin="5,0,5,0" Focusable="False">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="280" />
+                <ColumnDefinition Width="40" />
+				<ColumnDefinition Width="20" />
+				<ColumnDefinition Width="20" />
+				<ColumnDefinition Width="20" />
+				<ColumnDefinition MinWidth="100" Width="*" />
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+			</Grid.RowDefinitions>
+
+			<Separator Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" HorizontalAlignment="Stretch" Focusable="False" Height="10" VerticalAlignment="Center" x:Name="firstSep" />
+
+			<Label Content="{Binding Name}" Grid.Row="1" Grid.Column="0" Foreground="BlanchedAlmond"/>
+
+            <TextBlock Text="{Binding MaxLength}" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            <Image Grid.Row="1" Grid.Column="2" Source="{Binding .,Path=DataType,Converter={StaticResource columnTypeConverter}}"
+						 ToolTip="{Binding .,Path=DataType,Converter={StaticResource columnTypeTooltipConverter}}" />
+
+			<Image Grid.Row="1" Grid.Column="3" Source="{Binding .,Path=IsNullable,Converter={StaticResource nullableColumnConverter}}"
+						 ToolTip="{Binding .,Path=IsNullable,Converter={StaticResource nullableColumnTooltipConverter}}" />
+			
+			<Image Grid.Row="1" Grid.Column="4" ToolTip="This column has a constraint." Source="img/warning_16.png" Visibility="{Binding .,Path=IsPartOfConstraint,Converter={StaticResource visibilityConverter}}"/>
+
+			<ComboBox ItemsSource="{Binding Source={StaticResource generatorData}}" DisplayMemberPath="Name" SelectedValuePath="Id" Grid.Row="1" Grid.Column="5"
+											 SelectedValue="{Binding GeneratorType,Mode=TwoWay}" HorizontalContentAlignment="Stretch" Focusable="True" Margin="2,2,0,2" />
+
+			<UserControls:GeneratorOptions Grid.Row="2" Grid.Column="5"  GeneratorType="{Binding GeneratorType,Mode=OneWay}" 
+											GeneratorData="{Binding GeneratorData,Mode=TwoWay}" Column="{Binding .,Mode=TwoWay}" />
+		</Grid>
+	</DataTemplate>
+</ResourceDictionary>

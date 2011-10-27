@@ -1,0 +1,78 @@
+﻿<UserControl x:Class="WaveTech.Dafuscator.WpfApplication.UserControls.MessageWindows.NewWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:odc="clr-namespace:Odyssey.Controls;assembly=Odyssey" xmlns:uc="clr-namespace:WaveTech.Dafuscator.WpfApplication.UserControls">
+	<UserControl.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="/DataTemplates.xaml" />
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</UserControl.Resources>
+
+	<Grid Width="400" Height="250" TextBlock.FontSize="12">
+		<Grid x:Name="grid" Focusable="False">
+		</Grid>
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="250" />
+			</Grid.ColumnDefinitions>
+		</Grid>
+
+		<Border x:Name="defaultBtn" CornerRadius="6,6,0,0" Focusable="False"
+                                Margin="0" Opacity="1" HorizontalAlignment="Stretch" Background="{DynamicResource WindowBackgroundBrush}"
+                                BorderBrush="#FF242424" BorderThickness="2">
+			<Border x:Name="InnerBorder" Focusable="False" BorderThickness="2"
+                                    HorizontalAlignment="Stretch" BorderBrush="#80FFFFFF"
+                                    CornerRadius="2">
+				<Grid VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,10,0,0" >
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="125" />
+						<ColumnDefinition Width="225" />
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition />
+						<RowDefinition />
+						<RowDefinition />
+						<RowDefinition />
+						<RowDefinition />
+						<RowDefinition />
+						<RowDefinition />
+					</Grid.RowDefinitions>
+									
+					<TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="New Database" HorizontalAlignment="Center" Margin="4,4,4,4" FontSize="18" />
+
+					<TextBlock Grid.Row="1" Grid.Column="0" Text="Server name:" HorizontalAlignment="Left" VerticalAlignment="Center" Width="240" Margin="2,1,2,1" />
+					<TextBlock Grid.Row="2" Grid.Column="0" Text="Database name:" HorizontalAlignment="Left" VerticalAlignment="Center" Width="240" Margin="2,1,2,1" />
+					<TextBlock Grid.Row="3" Grid.Column="0" Text="Authentication:" HorizontalAlignment="Left" VerticalAlignment="Center" Width="240" Margin="2,1,2,1" />
+
+					<TextBlock Grid.Row="4" Grid.Column="0" Text="User name:" HorizontalAlignment="Left" VerticalAlignment="Center" Width="240" Margin="20,1,2,1" />
+					<TextBlock Grid.Row="5" Grid.Column="0" Text="Password:" HorizontalAlignment="Left" VerticalAlignment="Center" Width="240" Margin="20,1,2,1" />
+
+
+					<TextBox Grid.Row="1" Grid.Column="1" Margin="4,4,4,4"  x:Name="txtServerName" />
+					<TextBox Grid.Row="2" Grid.Column="1" Margin="4,4,4,4" x:Name="txtDatabaseName" />
+
+					<ComboBox Grid.Row="3" Grid.Column="1" x:Name="cboAuthenticationType" SelectionChanged="cboAuthenticationType_SelectionChanged">
+						<ComboBox.Items>
+							<ComboBoxItem>Windows Authentication</ComboBoxItem>
+							<ComboBoxItem>SQL Server Authentication</ComboBoxItem>
+						</ComboBox.Items>
+					</ComboBox>
+
+					<TextBox Grid.Row="4" Grid.Column="1" Margin="20,4,4,4" x:Name="txtUserName" />
+					<PasswordBox Grid.Row="5" Grid.Column="1" Margin="20,4,4,4" x:Name="txtPassword"/>
+
+					<odc:OdcButton Grid.Row="6" Grid.ColumnSpan="2" Content="Connect" x:Name="btnConnect" Click="btnConnect_Click"
+										 HorizontalAlignment="Center" Margin="2,10,2,4" Padding="4,0,4,0" odc:KeyTip.Key="C"/>
+					<odc:OdcButton Grid.Row="6" Grid.ColumnSpan="2" Content="Cancel" x:Name="btnCancel" Click="btnCancel_Click"
+										 HorizontalAlignment="Right" Margin="2,10,2,4" Padding="4,0,4,0" odc:KeyTip.Key="C"/>
+				</Grid>
+			</Border>
+		</Border>
+
+		<uc:LoadingAnimation Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="7" x:Name="loadingAnimation" 
+															 HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed" />
+	</Grid>
+</UserControl>

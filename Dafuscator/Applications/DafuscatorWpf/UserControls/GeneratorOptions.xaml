@@ -1,0 +1,166 @@
+﻿<UserControl x:Class="WaveTech.Dafuscator.WpfApplication.UserControls.GeneratorOptions"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+		xmlns:Model="clr-namespace:WaveTech.Dafuscator.Model;assembly=WaveTech.Dafuscator.Model" 
+	  xmlns:System="clr-namespace:System;assembly=mscorlib" 
+		xmlns:Controls="clr-namespace:Microsoft.Windows.Controls;assembly=WPFToolkit"
+		x:Name="generatorOptions">
+
+	<UserControl.Resources>
+		<ResourceDictionary Source="/DataTemplates.xaml" />
+	</UserControl.Resources>
+	
+	<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition />
+				<RowDefinition />
+			</Grid.RowDefinitions>
+				
+		<Grid Grid.Row="0" x:Name="NoOptionsGrid" Focusable="False">
+				<Label Content="No Generator Options" />
+			</Grid>
+
+		<Grid Grid.Row="0" x:Name="CharacterGeneratorOptionsGrid" Focusable="False">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition />
+			</Grid.RowDefinitions>
+			
+			<Label Grid.Column="0" Grid.Row="0" Content="Include Digits:" />
+			<CheckBox Grid.Column="1" Grid.Row="0" x:Name="characterGenerator_IncludeDigits" VerticalAlignment="Center"
+								IsChecked="{Binding Column, Path=GeneratorData[0] }" Click="characterGenerator_IncludeDigits_Click">
+			</CheckBox>
+		</Grid>
+
+		<Grid Grid.Row="0" x:Name="DateGeneratorOptionsGrid" Focusable="False">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition />
+				<RowDefinition />
+			</Grid.RowDefinitions>
+
+			<Label Grid.Column="0" Grid.Row="0" Content="Minimum Date:" />
+			<Controls:DatePicker x:Name="dateGenerator_MinDate" Grid.Column="1" Grid.Row="0" Margin="4,4,4,4" SelectedDate="{Binding Column, Path=GeneratorData[0], ElementName=generatorOptions}" />
+			
+			<Label Grid.Column="0" Grid.Row="1" Content="Maximum Date:" />
+			<Controls:DatePicker x:Name="dateGenerator_MaxDate" Grid.Column="1" Grid.Row="1" Margin="4,4,4,4" SelectedDate="{Binding Column, Path=GeneratorData[1], ElementName=generatorOptions}" />
+		</Grid>
+
+		<Grid Grid.Row="0" x:Name="NumberGeneratorOptionsGrid" Focusable="False">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition />
+				<RowDefinition />
+			</Grid.RowDefinitions>
+
+			<Label Grid.Column="0" Grid.Row="0" Content="Minimum Number:" />
+			<TextBox x:Name="numberGenerator_MinNumber" Grid.Column="1" Grid.Row="0" Margin="4,4,4,4" Text="{Binding Column, Path=GeneratorData[0] }" />
+
+			<Label Grid.Column="0" Grid.Row="1" Content="Maximum Number:" />
+			<TextBox x:Name="numberGenerator_MaxNumber" Grid.Column="1" Grid.Row="1" Margin="4,4,4,4" Text="{Binding Column, Path=GeneratorData[1] }" />
+		</Grid>
+			
+		<Grid Grid.Row="0" x:Name="PhoneNumberGeneratorOptionsGrid" Focusable="False">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition />
+			</Grid.RowDefinitions>
+
+			<Label Grid.Column="0" Grid.Row="0" Content="Include Area Code:" />
+			<CheckBox Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" x:Name="phoneNumberGenerator_IncludeAreaCode" IsChecked="{Binding Column, Path=GeneratorData[0] }" />
+		</Grid>
+			
+		<Grid Grid.Row="0" x:Name="StringGeneratorOptionsGrid" Focusable="False">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+				<RowDefinition />
+			</Grid.RowDefinitions>
+			
+			<Label Grid.Column="0" Grid.Row="0" Content="Minimum Length:" />
+			<TextBox x:Name="stringGenerator_MinLength" Grid.Column="1" Grid.Row="0" Margin="4,4,4,4" Text="{Binding Column, Path=GeneratorData[0] }" KeyUp="stringGenerator_MinLength_KeyUp" />
+
+			<Label Grid.Column="0" Grid.Row="1" Content="Maximum Length:" />
+			<TextBox x:Name="stringGenerator_MaxLength" Grid.Column="1" Grid.Row="1" Margin="4,4,4,4" Text="{Binding Column, Path=GeneratorData[1] }" KeyUp="stringGenerator_MaxLength_KeyUp" />
+
+			<Label Grid.Column="0" Grid.Row="2" Content="Include Numbers:" />
+			<CheckBox Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" x:Name="stringGenerator_IncludeNumbers" IsChecked="{Binding Column, Path=GeneratorData[2] }" Click="stringGenerator_IncludeNumbers_Click" />
+			
+			<Label Grid.Column="0" Grid.Row="3" Content="Special Characters:" />
+			<CheckBox Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" x:Name="stringGenerator_IncludeSpecialCharacters" IsChecked="{Binding Column, Path=GeneratorData[3] }" Click="stringGenerator_IncludeSpecialCharacters_Click" />
+		</Grid>
+
+		<Grid Grid.Row="0" x:Name="ZipCodeGeneratorOptionsGrid" Focusable="False">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition />
+			</Grid.RowDefinitions>
+
+			<Label Grid.Column="0" Grid.Row="0" Content="Include 4 Digit Suffix:" />
+			<CheckBox Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" x:Name="zipCodeGenerator_Include4Digits" IsChecked="{Binding Column, Path=GeneratorData[0] }" />
+		</Grid>
+		
+		<Grid Grid.Row="0" x:Name="ClearGeneratorOptionsGrid" Focusable="False">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition />
+			</Grid.RowDefinitions>
+
+			<Label Grid.Column="0" Grid.Row="0" Content="Use Null Instead:" />
+			<CheckBox Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" x:Name="clearGenerator_UseNullInstead" IsChecked="{Binding Column, Path=GeneratorData[0] }" />
+		</Grid>
+		
+		<Grid Grid.Row="0" x:Name="FullNameGeneratorOptionsGrid" Focusable="False">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition />
+				<RowDefinition />
+			</Grid.RowDefinitions>
+
+			<Label Grid.Column="0" Grid.Row="0" Content="Include Middle (Name/Init):" />
+			<CheckBox Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" x:Name="fullNameGenerator_IncludeMiddle" IsChecked="{Binding Column, Path=GeneratorData[0] }" />
+			
+			<Label Grid.Column="0" Grid.Row="1" Content="Full Name Middle:" />
+			<CheckBox Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" x:Name="fullNameGenerator_FullNameMiddle" IsChecked="{Binding Column, Path=GeneratorData[1] }" />
+		</Grid>
+
+    <Grid Grid.Row="0" x:Name="TokenGeneratorOptionsGrid" Focusable="False">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Label Grid.Column="0" Grid.Row="0" Content="Token String:" />
+            <TextBox x:Name="tokenGenerator_TokenString" Grid.Column="1" Grid.Row="0" Margin="4,4,4,4" Text="{Binding Column, Path=GeneratorData[0] }" />
+        </Grid>
+	</Grid>
+</UserControl>

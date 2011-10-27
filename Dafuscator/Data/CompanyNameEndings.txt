@@ -1,0 +1,22 @@
+Association
+Assoc
+Company
+Cpy
+Corporation
+Corp.
+Club
+Foundation
+Found.
+Fund
+Incorporated
+Inc.
+Institute
+Inst.
+Limited
+Ltd.
+Society
+Syndicate
+Union
+Limited Liability Company
+L.L.C.
+LLC

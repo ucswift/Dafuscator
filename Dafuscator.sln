@@ -1,0 +1,453 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{56AE4ABC-248D-4BEA-ACB1-7DA3D3E5350B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{4C25EBFF-6AC7-49D2-A5F8-DC76C6F0A3A1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Applications", "Applications", "{7825D3F1-FBC7-486E-9872-A26181AD0CD6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{88378213-6E4D-480B-B2BD-E39966A6063F}"
+	ProjectSection(SolutionItems) = preProject
+		Data\City.txt = Data\City.txt
+		Data\CompanyNameBeginnings.txt = Data\CompanyNameBeginnings.txt
+		Data\CompanyNameEndings.txt = Data\CompanyNameEndings.txt
+		Data\CompanyNameMiddles.txt = Data\CompanyNameMiddles.txt
+		Data\Country.txt = Data\Country.txt
+		Data\FirstNames.txt = Data\FirstNames.txt
+		Data\LastNames.txt = Data\LastNames.txt
+		Data\SecurityNames.txt = Data\SecurityNames.txt
+		Data\SecurityTypes.txt = Data\SecurityTypes.txt
+		Data\State.txt = Data\State.txt
+		Data\Streets.txt = Data\Streets.txt
+		Data\Symbols.txt = Data\Symbols.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Providers", "Providers", "{AA83DB9A-56E0-45CD-A2AE-C93A869161ED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repositories", "Repositories", "{47501907-F6F4-4655-83F1-0E9C2A6DA03B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "References", "References", "{3B343973-14BC-40A6-A378-E53D60EC7A0B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StructureMap", "StructureMap", "{E304BF10-7721-4F1B-B2BE-A7534688D0ED}"
+	ProjectSection(SolutionItems) = preProject
+		References\StructureMap\StructureMap.dll = References\StructureMap\StructureMap.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NUnit", "NUnit", "{BC75A69A-3AA0-459F-B49C-ABADA150648E}"
+	ProjectSection(SolutionItems) = preProject
+		References\NUnit\nunit.framework.dll = References\NUnit\nunit.framework.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{89E5305A-E978-44AB-9052-7392079FDDBE}"
+	ProjectSection(SolutionItems) = preProject
+		Images\DafuscatorIcon.ico = Images\DafuscatorIcon.ico
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Odyssey", "Odyssey", "{6DAEDB08-F757-4BE8-BC8E-875348044B3C}"
+	ProjectSection(SolutionItems) = preProject
+		References\Odyssey\Odyssey.dll = References\Odyssey\Odyssey.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{84CDE3AB-BAE1-49D7-9ED1-F1BC747382FA}"
+	ProjectSection(SolutionItems) = preProject
+		Build\Build.Dafuscator.Debug.bat = Build\Build.Dafuscator.Debug.bat
+		Build\Build.Dafuscator.Demo.bat = Build\Build.Dafuscator.Demo.bat
+		Build\Build.Dafuscator.Demo.build = Build\Build.Dafuscator.Demo.build
+		Build\Build.Dafuscator.Demo.CI.build = Build\Build.Dafuscator.Demo.CI.build
+		Build\Build.Dafuscator.Full.bat = Build\Build.Dafuscator.Full.bat
+		Build\Build.Dafuscator.Full.build = Build\Build.Dafuscator.Full.build
+		Build\Build.Dafuscator.Full.CI.build = Build\Build.Dafuscator.Full.CI.build
+		Build\Create.Installer.CI.CE.bat = Build\Create.Installer.CI.CE.bat
+		Build\Create.Installer.CI.FULL.bat = Build\Create.Installer.CI.FULL.bat
+		Build\Dafuscator-DebugBuild.build = Build\Dafuscator-DebugBuild.build
+		Build\MasterHooker-DEMO.cs = Build\MasterHooker-DEMO.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{C8CFBD32-5FA1-4C89-95F9-6B418D76710E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NAnt", "NAnt", "{BC31AF81-6E44-4FBE-8D62-835E5600DD8C}"
+	ProjectSection(SolutionItems) = preProject
+		Build\Tools\NAnt\log4net.dll = Build\Tools\NAnt\log4net.dll
+		Build\Tools\NAnt\NAnt.CompressionTasks.dll = Build\Tools\NAnt\NAnt.CompressionTasks.dll
+		Build\Tools\NAnt\NAnt.CompressionTasks.xml = Build\Tools\NAnt\NAnt.CompressionTasks.xml
+		Build\Tools\NAnt\NAnt.Core.dll = Build\Tools\NAnt\NAnt.Core.dll
+		Build\Tools\NAnt\NAnt.Core.xml = Build\Tools\NAnt\NAnt.Core.xml
+		Build\Tools\NAnt\NAnt.DotNetTasks.dll = Build\Tools\NAnt\NAnt.DotNetTasks.dll
+		Build\Tools\NAnt\NAnt.DotNetTasks.xml = Build\Tools\NAnt\NAnt.DotNetTasks.xml
+		Build\Tools\NAnt\NAnt.exe = Build\Tools\NAnt\NAnt.exe
+		Build\Tools\NAnt\NAnt.exe.config = Build\Tools\NAnt\NAnt.exe.config
+		Build\Tools\NAnt\NAnt.MSNetTasks.dll = Build\Tools\NAnt\NAnt.MSNetTasks.dll
+		Build\Tools\NAnt\NAnt.MSNetTasks.xml = Build\Tools\NAnt\NAnt.MSNetTasks.xml
+		Build\Tools\NAnt\NAnt.NUnit.dll = Build\Tools\NAnt\NAnt.NUnit.dll
+		Build\Tools\NAnt\NAnt.NUnit.xml = Build\Tools\NAnt\NAnt.NUnit.xml
+		Build\Tools\NAnt\NAnt.NUnit1Tasks.dll = Build\Tools\NAnt\NAnt.NUnit1Tasks.dll
+		Build\Tools\NAnt\NAnt.NUnit1Tasks.xml = Build\Tools\NAnt\NAnt.NUnit1Tasks.xml
+		Build\Tools\NAnt\NAnt.NUnit2Tasks.dll = Build\Tools\NAnt\NAnt.NUnit2Tasks.dll
+		Build\Tools\NAnt\NAnt.NUnit2Tasks.xml = Build\Tools\NAnt\NAnt.NUnit2Tasks.xml
+		Build\Tools\NAnt\NAnt.SourceControlTasks.dll = Build\Tools\NAnt\NAnt.SourceControlTasks.dll
+		Build\Tools\NAnt\NAnt.SourceControlTasks.xml = Build\Tools\NAnt\NAnt.SourceControlTasks.xml
+		Build\Tools\NAnt\NAnt.VisualCppTasks.dll = Build\Tools\NAnt\NAnt.VisualCppTasks.dll
+		Build\Tools\NAnt\NAnt.VisualCppTasks.xml = Build\Tools\NAnt\NAnt.VisualCppTasks.xml
+		Build\Tools\NAnt\NAnt.VSNetTasks.dll = Build\Tools\NAnt\NAnt.VSNetTasks.dll
+		Build\Tools\NAnt\NAnt.VSNetTasks.xml = Build\Tools\NAnt\NAnt.VSNetTasks.xml
+		Build\Tools\NAnt\NAnt.Win32Tasks.dll = Build\Tools\NAnt\NAnt.Win32Tasks.dll
+		Build\Tools\NAnt\NAnt.Win32Tasks.xml = Build\Tools\NAnt\NAnt.Win32Tasks.xml
+		Build\Tools\NAnt\NAnt.xml = Build\Tools\NAnt\NAnt.xml
+		Build\Tools\NAnt\NDoc.Documenter.NAnt.dll = Build\Tools\NAnt\NDoc.Documenter.NAnt.dll
+		Build\Tools\NAnt\scvs.exe = Build\Tools\NAnt\scvs.exe
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SA", "SA", "{D59888B7-E9E8-4998-8C79-7E87FA9B9965}"
+	ProjectSection(SolutionItems) = preProject
+		Build\Tools\SA\SARunner.exe = Build\Tools\SA\SARunner.exe
+		Build\Tools\SA\SARunner.exe.config = Build\Tools\SA\SARunner.exe.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{0AEE6F92-0574-4BF2-B285-31C4C79CD6FD}"
+	ProjectSection(SolutionItems) = preProject
+		Build\Tools\NAnt\lib\ICSharpCode.SharpCvsLib.Console.dll = Build\Tools\NAnt\lib\ICSharpCode.SharpCvsLib.Console.dll
+		Build\Tools\NAnt\lib\ICSharpCode.SharpCvsLib.dll = Build\Tools\NAnt\lib\ICSharpCode.SharpCvsLib.dll
+		Build\Tools\NAnt\lib\ICSharpCode.SharpZipLib.dll = Build\Tools\NAnt\lib\ICSharpCode.SharpZipLib.dll
+		Build\Tools\NAnt\lib\NUnitCore.dll = Build\Tools\NAnt\lib\NUnitCore.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "net", "net", "{229C832F-F946-42AB-97EB-D8F1A55AE820}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.0", "2.0", "{7259E81D-0701-4AA4-A7C6-33B2A7301FC4}"
+	ProjectSection(SolutionItems) = preProject
+		Build\Tools\NAnt\lib\net\2.0\NDoc.Core.dll = Build\Tools\NAnt\lib\net\2.0\NDoc.Core.dll
+		Build\Tools\NAnt\lib\net\2.0\NDoc.Documenter.Msdn.dll = Build\Tools\NAnt\lib\net\2.0\NDoc.Documenter.Msdn.dll
+		Build\Tools\NAnt\lib\net\2.0\NDoc.ExtendedUI.dll = Build\Tools\NAnt\lib\net\2.0\NDoc.ExtendedUI.dll
+		Build\Tools\NAnt\lib\net\2.0\nunit.core.dll = Build\Tools\NAnt\lib\net\2.0\nunit.core.dll
+		Build\Tools\NAnt\lib\net\2.0\nunit.framework.dll = Build\Tools\NAnt\lib\net\2.0\nunit.framework.dll
+		Build\Tools\NAnt\lib\net\2.0\nunit.util.dll = Build\Tools\NAnt\lib\net\2.0\nunit.util.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CommandLine", "CommandLine", "{10A937E0-D1E9-4C61-93E9-565F50065B29}"
+	ProjectSection(SolutionItems) = preProject
+		References\CommandLine\CommandLine.dll = References\CommandLine\CommandLine.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{11AF5B27-1347-4CC5-9277-40708D5E6C46}"
+	ProjectSection(SolutionItems) = preProject
+		Common\AssemblyInfo.cs = Common\AssemblyInfo.cs
+		Common\Dafuscator-PubPriv-KeyFile.snk = Common\Dafuscator-PubPriv-KeyFile.snk
+		Common\DafuscatorDocumentation.chm = Common\DafuscatorDocumentation.chm
+		Common\MasterHooker.cs = Common\MasterHooker.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Composite", "Composite", "{CEB0FE5B-7479-4417-B54B-592F899398FD}"
+	ProjectSection(SolutionItems) = preProject
+		References\Composite\Microsoft.Practices.Composite.dll = References\Composite\Microsoft.Practices.Composite.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WPF Toolkit", "WPF Toolkit", "{620B6BA2-1893-4E13-978B-2229EDACF564}"
+	ProjectSection(SolutionItems) = preProject
+		References\WPF Toolkit\System.Windows.Controls.DataVisualization.Toolkit.Design.4.0.dll = References\WPF Toolkit\System.Windows.Controls.DataVisualization.Toolkit.Design.4.0.dll
+		References\WPF Toolkit\System.Windows.Controls.DataVisualization.Toolkit.Design.4.0.pdb = References\WPF Toolkit\System.Windows.Controls.DataVisualization.Toolkit.Design.4.0.pdb
+		References\WPF Toolkit\System.Windows.Controls.DataVisualization.Toolkit.dll = References\WPF Toolkit\System.Windows.Controls.DataVisualization.Toolkit.dll
+		References\WPF Toolkit\System.Windows.Controls.DataVisualization.Toolkit.Expression.Design.dll = References\WPF Toolkit\System.Windows.Controls.DataVisualization.Toolkit.Expression.Design.dll
+		References\WPF Toolkit\System.Windows.Controls.DataVisualization.Toolkit.Expression.Design.pdb = References\WPF Toolkit\System.Windows.Controls.DataVisualization.Toolkit.Expression.Design.pdb
+		References\WPF Toolkit\System.Windows.Controls.DataVisualization.Toolkit.pdb = References\WPF Toolkit\System.Windows.Controls.DataVisualization.Toolkit.pdb
+		References\WPF Toolkit\System.Windows.Controls.DataVisualization.Toolkit.VisualStudio.Design.dll = References\WPF Toolkit\System.Windows.Controls.DataVisualization.Toolkit.VisualStudio.Design.dll
+		References\WPF Toolkit\System.Windows.Controls.DataVisualization.Toolkit.VisualStudio.Design.pdb = References\WPF Toolkit\System.Windows.Controls.DataVisualization.Toolkit.VisualStudio.Design.pdb
+		References\WPF Toolkit\System.Windows.Controls.Input.Toolkit.Design.dll = References\WPF Toolkit\System.Windows.Controls.Input.Toolkit.Design.dll
+		References\WPF Toolkit\System.Windows.Controls.Input.Toolkit.Design.pdb = References\WPF Toolkit\System.Windows.Controls.Input.Toolkit.Design.pdb
+		References\WPF Toolkit\System.Windows.Controls.Input.Toolkit.dll = References\WPF Toolkit\System.Windows.Controls.Input.Toolkit.dll
+		References\WPF Toolkit\System.Windows.Controls.Input.Toolkit.pdb = References\WPF Toolkit\System.Windows.Controls.Input.Toolkit.pdb
+		References\WPF Toolkit\System.Windows.Controls.Input.Toolkit.VisualStudio.Design.dll = References\WPF Toolkit\System.Windows.Controls.Input.Toolkit.VisualStudio.Design.dll
+		References\WPF Toolkit\System.Windows.Controls.Input.Toolkit.VisualStudio.Design.pdb = References\WPF Toolkit\System.Windows.Controls.Input.Toolkit.VisualStudio.Design.pdb
+		References\WPF Toolkit\System.Windows.Controls.Layout.Toolkit.Design.dll = References\WPF Toolkit\System.Windows.Controls.Layout.Toolkit.Design.dll
+		References\WPF Toolkit\System.Windows.Controls.Layout.Toolkit.Design.pdb = References\WPF Toolkit\System.Windows.Controls.Layout.Toolkit.Design.pdb
+		References\WPF Toolkit\System.Windows.Controls.Layout.Toolkit.dll = References\WPF Toolkit\System.Windows.Controls.Layout.Toolkit.dll
+		References\WPF Toolkit\System.Windows.Controls.Layout.Toolkit.pdb = References\WPF Toolkit\System.Windows.Controls.Layout.Toolkit.pdb
+		References\WPF Toolkit\System.Windows.Controls.Layout.Toolkit.VisualStudio.Design.dll = References\WPF Toolkit\System.Windows.Controls.Layout.Toolkit.VisualStudio.Design.dll
+		References\WPF Toolkit\System.Windows.Controls.Layout.Toolkit.VisualStudio.Design.pdb = References\WPF Toolkit\System.Windows.Controls.Layout.Toolkit.VisualStudio.Design.pdb
+		References\WPF Toolkit\WPFToolkit.Design.dll = References\WPF Toolkit\WPFToolkit.Design.dll
+		References\WPF Toolkit\WPFToolkit.Design.pdb = References\WPF Toolkit\WPFToolkit.Design.pdb
+		References\WPF Toolkit\WPFToolkit.dll = References\WPF Toolkit\WPFToolkit.dll
+		References\WPF Toolkit\WPFToolkit.pdb = References\WPF Toolkit\WPFToolkit.pdb
+		References\WPF Toolkit\WPFToolkit.VisualStudio.Design.dll = References\WPF Toolkit\WPFToolkit.VisualStudio.Design.dll
+		References\WPF Toolkit\WPFToolkit.VisualStudio.Design.pdb = References\WPF Toolkit\WPFToolkit.VisualStudio.Design.pdb
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{563CFF1E-6CB7-44AC-918F-738AA8733380}"
+	ProjectSection(SolutionItems) = preProject
+		Solution Items\Dafuscator EULA.rtf = Solution Items\Dafuscator EULA.rtf
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "Tests\UnitTests\UnitTests.csproj", "{DFE46CC5-6556-495F-A2F8-B388AB9D1C1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestHarness", "Tests\TestHarness\TestHarness.csproj", "{FA6C68E8-EC37-4915-B08C-D0B7E6DD2CF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Core\Model\Model.csproj", "{BFF2EC6A-660D-4A3C-8D6F-06F1D3573BF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Core\Services\Services.csproj", "{DA90BEED-01AA-4ED5-AD32-4C904C8E74B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DafuscatorWpf", "Applications\DafuscatorWpf\DafuscatorWpf.csproj", "{E149D46D-0B0C-4248-9851-8B37DBC85331}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileDataProvider", "Providers\FileDataProvider\FileDataProvider.csproj", "{09C3BA65-5885-465E-99C6-C06DF0765AB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TokenReplacementProvider", "Providers\TokenReplacementProvider\TokenReplacementProvider.csproj", "{E02038DD-DA61-4B2B-9D95-6F0C0954FD18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseInteractionProvider", "Providers\DatabaseInteractionProvider\DatabaseInteractionProvider.csproj", "{44173306-5A9A-474D-990E-6BC698B4A679}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DafuscatorBatch", "Applications\DafuscatorBatch\DafuscatorBatch.csproj", "{82123438-B491-40CC-BB16-429158AC972A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectSerializationProvider", "Providers\ObjectSerializationProvider\ObjectSerializationProvider.csproj", "{FEB1E576-80EF-47CC-8DBA-FD71E3FCDBDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SymmetricEncryptionProvider", "Providers\SymmetricEncryptionProvider\SymmetricEncryptionProvider.csproj", "{665E8352-6DBC-49BD-A349-70D504D097A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework", "Core\Framework\Framework.csproj", "{D4ECB540-CCB7-4649-BB26-FB071A27F24F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generators", "Core\Generators\Generators.csproj", "{169A6F5D-D92D-482D-9990-718FD1067BEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseProjectRepository", "Repositories\DatabaseProjectRepository\DatabaseProjectRepository.csproj", "{F355EBE2-0433-41DA-96A7-486440057FCA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generators.DEMO", "Core\Generators.DEMO\Generators.DEMO.csproj", "{1D5400CF-8540-439E-AED5-2DAEFB755FB3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VNManager", "VNManager", "{5FA2030C-9AA3-4E1B-940B-78EE20C1E47C}"
+	ProjectSection(SolutionItems) = preProject
+		Build\Tools\VNManager\VNManager.exe = Build\Tools\VNManager\VNManager.exe
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NLog", "NLog", "{E771626C-38EB-4A8A-8FBA-CFD1F5BE6958}"
+	ProjectSection(SolutionItems) = preProject
+		References\NLog\NLog.dll = References\NLog\NLog.dll
+		References\NLog\NLog.Extended.dll = References\NLog\NLog.Extended.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "{SmartAssembly}", "{SmartAssembly}", "{3906ABDB-4F44-4925-B7A4-DD20AA2F3576}"
+	ProjectSection(SolutionItems) = preProject
+		{SmartAssembly}\Dafuscator.Batch.Demo.RELEASE.saproj = {SmartAssembly}\Dafuscator.Batch.Demo.RELEASE.saproj
+		{SmartAssembly}\Dafuscator.Batch.FULL.RELEASE.saproj = {SmartAssembly}\Dafuscator.Batch.FULL.RELEASE.saproj
+		{SmartAssembly}\Dafuscator.Wpf.Demo.RELEASE.saproj = {SmartAssembly}\Dafuscator.Wpf.Demo.RELEASE.saproj
+		{SmartAssembly}\Dafuscator.Wpf.FULL.RELEASE.saproj = {SmartAssembly}\Dafuscator.Wpf.FULL.RELEASE.saproj
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		CE|Any CPU = CE|Any CPU
+		CE|x86 = CE|x86
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DFE46CC5-6556-495F-A2F8-B388AB9D1C1D}.CE|Any CPU.ActiveCfg = CE|Any CPU
+		{DFE46CC5-6556-495F-A2F8-B388AB9D1C1D}.CE|Any CPU.Build.0 = CE|Any CPU
+		{DFE46CC5-6556-495F-A2F8-B388AB9D1C1D}.CE|x86.ActiveCfg = CE|x86
+		{DFE46CC5-6556-495F-A2F8-B388AB9D1C1D}.CE|x86.Build.0 = CE|x86
+		{DFE46CC5-6556-495F-A2F8-B388AB9D1C1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFE46CC5-6556-495F-A2F8-B388AB9D1C1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFE46CC5-6556-495F-A2F8-B388AB9D1C1D}.Debug|x86.ActiveCfg = Debug|x86
+		{DFE46CC5-6556-495F-A2F8-B388AB9D1C1D}.Debug|x86.Build.0 = Debug|x86
+		{DFE46CC5-6556-495F-A2F8-B388AB9D1C1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFE46CC5-6556-495F-A2F8-B388AB9D1C1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFE46CC5-6556-495F-A2F8-B388AB9D1C1D}.Release|x86.ActiveCfg = Release|x86
+		{DFE46CC5-6556-495F-A2F8-B388AB9D1C1D}.Release|x86.Build.0 = Release|x86
+		{FA6C68E8-EC37-4915-B08C-D0B7E6DD2CF3}.CE|Any CPU.ActiveCfg = CE|Any CPU
+		{FA6C68E8-EC37-4915-B08C-D0B7E6DD2CF3}.CE|Any CPU.Build.0 = CE|Any CPU
+		{FA6C68E8-EC37-4915-B08C-D0B7E6DD2CF3}.CE|x86.ActiveCfg = CE|x86
+		{FA6C68E8-EC37-4915-B08C-D0B7E6DD2CF3}.CE|x86.Build.0 = CE|x86
+		{FA6C68E8-EC37-4915-B08C-D0B7E6DD2CF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA6C68E8-EC37-4915-B08C-D0B7E6DD2CF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA6C68E8-EC37-4915-B08C-D0B7E6DD2CF3}.Debug|x86.ActiveCfg = Debug|x86
+		{FA6C68E8-EC37-4915-B08C-D0B7E6DD2CF3}.Debug|x86.Build.0 = Debug|x86
+		{FA6C68E8-EC37-4915-B08C-D0B7E6DD2CF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA6C68E8-EC37-4915-B08C-D0B7E6DD2CF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA6C68E8-EC37-4915-B08C-D0B7E6DD2CF3}.Release|x86.ActiveCfg = Release|x86
+		{FA6C68E8-EC37-4915-B08C-D0B7E6DD2CF3}.Release|x86.Build.0 = Release|x86
+		{BFF2EC6A-660D-4A3C-8D6F-06F1D3573BF3}.CE|Any CPU.ActiveCfg = CE|Any CPU
+		{BFF2EC6A-660D-4A3C-8D6F-06F1D3573BF3}.CE|Any CPU.Build.0 = CE|Any CPU
+		{BFF2EC6A-660D-4A3C-8D6F-06F1D3573BF3}.CE|x86.ActiveCfg = CE|x86
+		{BFF2EC6A-660D-4A3C-8D6F-06F1D3573BF3}.CE|x86.Build.0 = CE|x86
+		{BFF2EC6A-660D-4A3C-8D6F-06F1D3573BF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFF2EC6A-660D-4A3C-8D6F-06F1D3573BF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFF2EC6A-660D-4A3C-8D6F-06F1D3573BF3}.Debug|x86.ActiveCfg = Debug|x86
+		{BFF2EC6A-660D-4A3C-8D6F-06F1D3573BF3}.Debug|x86.Build.0 = Debug|x86
+		{BFF2EC6A-660D-4A3C-8D6F-06F1D3573BF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFF2EC6A-660D-4A3C-8D6F-06F1D3573BF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFF2EC6A-660D-4A3C-8D6F-06F1D3573BF3}.Release|x86.ActiveCfg = Release|x86
+		{BFF2EC6A-660D-4A3C-8D6F-06F1D3573BF3}.Release|x86.Build.0 = Release|x86
+		{DA90BEED-01AA-4ED5-AD32-4C904C8E74B8}.CE|Any CPU.ActiveCfg = CE|Any CPU
+		{DA90BEED-01AA-4ED5-AD32-4C904C8E74B8}.CE|Any CPU.Build.0 = CE|Any CPU
+		{DA90BEED-01AA-4ED5-AD32-4C904C8E74B8}.CE|x86.ActiveCfg = CE|x86
+		{DA90BEED-01AA-4ED5-AD32-4C904C8E74B8}.CE|x86.Build.0 = CE|x86
+		{DA90BEED-01AA-4ED5-AD32-4C904C8E74B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA90BEED-01AA-4ED5-AD32-4C904C8E74B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA90BEED-01AA-4ED5-AD32-4C904C8E74B8}.Debug|x86.ActiveCfg = Debug|x86
+		{DA90BEED-01AA-4ED5-AD32-4C904C8E74B8}.Debug|x86.Build.0 = Debug|x86
+		{DA90BEED-01AA-4ED5-AD32-4C904C8E74B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA90BEED-01AA-4ED5-AD32-4C904C8E74B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA90BEED-01AA-4ED5-AD32-4C904C8E74B8}.Release|x86.ActiveCfg = Release|x86
+		{DA90BEED-01AA-4ED5-AD32-4C904C8E74B8}.Release|x86.Build.0 = Release|x86
+		{E149D46D-0B0C-4248-9851-8B37DBC85331}.CE|Any CPU.ActiveCfg = CE|Any CPU
+		{E149D46D-0B0C-4248-9851-8B37DBC85331}.CE|Any CPU.Build.0 = CE|Any CPU
+		{E149D46D-0B0C-4248-9851-8B37DBC85331}.CE|x86.ActiveCfg = CE|x86
+		{E149D46D-0B0C-4248-9851-8B37DBC85331}.CE|x86.Build.0 = CE|x86
+		{E149D46D-0B0C-4248-9851-8B37DBC85331}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E149D46D-0B0C-4248-9851-8B37DBC85331}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E149D46D-0B0C-4248-9851-8B37DBC85331}.Debug|x86.ActiveCfg = Debug|x86
+		{E149D46D-0B0C-4248-9851-8B37DBC85331}.Debug|x86.Build.0 = Debug|x86
+		{E149D46D-0B0C-4248-9851-8B37DBC85331}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E149D46D-0B0C-4248-9851-8B37DBC85331}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E149D46D-0B0C-4248-9851-8B37DBC85331}.Release|x86.ActiveCfg = Release|x86
+		{E149D46D-0B0C-4248-9851-8B37DBC85331}.Release|x86.Build.0 = Release|x86
+		{09C3BA65-5885-465E-99C6-C06DF0765AB5}.CE|Any CPU.ActiveCfg = CE|Any CPU
+		{09C3BA65-5885-465E-99C6-C06DF0765AB5}.CE|Any CPU.Build.0 = CE|Any CPU
+		{09C3BA65-5885-465E-99C6-C06DF0765AB5}.CE|x86.ActiveCfg = CE|x86
+		{09C3BA65-5885-465E-99C6-C06DF0765AB5}.CE|x86.Build.0 = CE|x86
+		{09C3BA65-5885-465E-99C6-C06DF0765AB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09C3BA65-5885-465E-99C6-C06DF0765AB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09C3BA65-5885-465E-99C6-C06DF0765AB5}.Debug|x86.ActiveCfg = Debug|x86
+		{09C3BA65-5885-465E-99C6-C06DF0765AB5}.Debug|x86.Build.0 = Debug|x86
+		{09C3BA65-5885-465E-99C6-C06DF0765AB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09C3BA65-5885-465E-99C6-C06DF0765AB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09C3BA65-5885-465E-99C6-C06DF0765AB5}.Release|x86.ActiveCfg = Release|x86
+		{09C3BA65-5885-465E-99C6-C06DF0765AB5}.Release|x86.Build.0 = Release|x86
+		{E02038DD-DA61-4B2B-9D95-6F0C0954FD18}.CE|Any CPU.ActiveCfg = CE|Any CPU
+		{E02038DD-DA61-4B2B-9D95-6F0C0954FD18}.CE|Any CPU.Build.0 = CE|Any CPU
+		{E02038DD-DA61-4B2B-9D95-6F0C0954FD18}.CE|x86.ActiveCfg = CE|x86
+		{E02038DD-DA61-4B2B-9D95-6F0C0954FD18}.CE|x86.Build.0 = CE|x86
+		{E02038DD-DA61-4B2B-9D95-6F0C0954FD18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E02038DD-DA61-4B2B-9D95-6F0C0954FD18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E02038DD-DA61-4B2B-9D95-6F0C0954FD18}.Debug|x86.ActiveCfg = Debug|x86
+		{E02038DD-DA61-4B2B-9D95-6F0C0954FD18}.Debug|x86.Build.0 = Debug|x86
+		{E02038DD-DA61-4B2B-9D95-6F0C0954FD18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E02038DD-DA61-4B2B-9D95-6F0C0954FD18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E02038DD-DA61-4B2B-9D95-6F0C0954FD18}.Release|x86.ActiveCfg = Release|x86
+		{E02038DD-DA61-4B2B-9D95-6F0C0954FD18}.Release|x86.Build.0 = Release|x86
+		{44173306-5A9A-474D-990E-6BC698B4A679}.CE|Any CPU.ActiveCfg = CE|Any CPU
+		{44173306-5A9A-474D-990E-6BC698B4A679}.CE|Any CPU.Build.0 = CE|Any CPU
+		{44173306-5A9A-474D-990E-6BC698B4A679}.CE|x86.ActiveCfg = CE|x86
+		{44173306-5A9A-474D-990E-6BC698B4A679}.CE|x86.Build.0 = CE|x86
+		{44173306-5A9A-474D-990E-6BC698B4A679}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44173306-5A9A-474D-990E-6BC698B4A679}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44173306-5A9A-474D-990E-6BC698B4A679}.Debug|x86.ActiveCfg = Debug|x86
+		{44173306-5A9A-474D-990E-6BC698B4A679}.Debug|x86.Build.0 = Debug|x86
+		{44173306-5A9A-474D-990E-6BC698B4A679}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44173306-5A9A-474D-990E-6BC698B4A679}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44173306-5A9A-474D-990E-6BC698B4A679}.Release|x86.ActiveCfg = Release|x86
+		{44173306-5A9A-474D-990E-6BC698B4A679}.Release|x86.Build.0 = Release|x86
+		{82123438-B491-40CC-BB16-429158AC972A}.CE|Any CPU.ActiveCfg = CE|Any CPU
+		{82123438-B491-40CC-BB16-429158AC972A}.CE|Any CPU.Build.0 = CE|Any CPU
+		{82123438-B491-40CC-BB16-429158AC972A}.CE|x86.ActiveCfg = CE|x86
+		{82123438-B491-40CC-BB16-429158AC972A}.CE|x86.Build.0 = CE|x86
+		{82123438-B491-40CC-BB16-429158AC972A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82123438-B491-40CC-BB16-429158AC972A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82123438-B491-40CC-BB16-429158AC972A}.Debug|x86.ActiveCfg = Debug|x86
+		{82123438-B491-40CC-BB16-429158AC972A}.Debug|x86.Build.0 = Debug|x86
+		{82123438-B491-40CC-BB16-429158AC972A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82123438-B491-40CC-BB16-429158AC972A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82123438-B491-40CC-BB16-429158AC972A}.Release|x86.ActiveCfg = Release|x86
+		{82123438-B491-40CC-BB16-429158AC972A}.Release|x86.Build.0 = Release|x86
+		{FEB1E576-80EF-47CC-8DBA-FD71E3FCDBDD}.CE|Any CPU.ActiveCfg = CE|Any CPU
+		{FEB1E576-80EF-47CC-8DBA-FD71E3FCDBDD}.CE|Any CPU.Build.0 = CE|Any CPU
+		{FEB1E576-80EF-47CC-8DBA-FD71E3FCDBDD}.CE|x86.ActiveCfg = CE|x86
+		{FEB1E576-80EF-47CC-8DBA-FD71E3FCDBDD}.CE|x86.Build.0 = CE|x86
+		{FEB1E576-80EF-47CC-8DBA-FD71E3FCDBDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEB1E576-80EF-47CC-8DBA-FD71E3FCDBDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEB1E576-80EF-47CC-8DBA-FD71E3FCDBDD}.Debug|x86.ActiveCfg = Debug|x86
+		{FEB1E576-80EF-47CC-8DBA-FD71E3FCDBDD}.Debug|x86.Build.0 = Debug|x86
+		{FEB1E576-80EF-47CC-8DBA-FD71E3FCDBDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEB1E576-80EF-47CC-8DBA-FD71E3FCDBDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEB1E576-80EF-47CC-8DBA-FD71E3FCDBDD}.Release|x86.ActiveCfg = Release|x86
+		{FEB1E576-80EF-47CC-8DBA-FD71E3FCDBDD}.Release|x86.Build.0 = Release|x86
+		{665E8352-6DBC-49BD-A349-70D504D097A6}.CE|Any CPU.ActiveCfg = CE|Any CPU
+		{665E8352-6DBC-49BD-A349-70D504D097A6}.CE|Any CPU.Build.0 = CE|Any CPU
+		{665E8352-6DBC-49BD-A349-70D504D097A6}.CE|x86.ActiveCfg = CE|x86
+		{665E8352-6DBC-49BD-A349-70D504D097A6}.CE|x86.Build.0 = CE|x86
+		{665E8352-6DBC-49BD-A349-70D504D097A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{665E8352-6DBC-49BD-A349-70D504D097A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{665E8352-6DBC-49BD-A349-70D504D097A6}.Debug|x86.ActiveCfg = Debug|x86
+		{665E8352-6DBC-49BD-A349-70D504D097A6}.Debug|x86.Build.0 = Debug|x86
+		{665E8352-6DBC-49BD-A349-70D504D097A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{665E8352-6DBC-49BD-A349-70D504D097A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{665E8352-6DBC-49BD-A349-70D504D097A6}.Release|x86.ActiveCfg = Release|x86
+		{665E8352-6DBC-49BD-A349-70D504D097A6}.Release|x86.Build.0 = Release|x86
+		{D4ECB540-CCB7-4649-BB26-FB071A27F24F}.CE|Any CPU.ActiveCfg = CE|Any CPU
+		{D4ECB540-CCB7-4649-BB26-FB071A27F24F}.CE|Any CPU.Build.0 = CE|Any CPU
+		{D4ECB540-CCB7-4649-BB26-FB071A27F24F}.CE|x86.ActiveCfg = CE|x86
+		{D4ECB540-CCB7-4649-BB26-FB071A27F24F}.CE|x86.Build.0 = CE|x86
+		{D4ECB540-CCB7-4649-BB26-FB071A27F24F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4ECB540-CCB7-4649-BB26-FB071A27F24F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4ECB540-CCB7-4649-BB26-FB071A27F24F}.Debug|x86.ActiveCfg = Debug|x86
+		{D4ECB540-CCB7-4649-BB26-FB071A27F24F}.Debug|x86.Build.0 = Debug|x86
+		{D4ECB540-CCB7-4649-BB26-FB071A27F24F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4ECB540-CCB7-4649-BB26-FB071A27F24F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4ECB540-CCB7-4649-BB26-FB071A27F24F}.Release|x86.ActiveCfg = Release|x86
+		{D4ECB540-CCB7-4649-BB26-FB071A27F24F}.Release|x86.Build.0 = Release|x86
+		{169A6F5D-D92D-482D-9990-718FD1067BEB}.CE|Any CPU.ActiveCfg = CE|Any CPU
+		{169A6F5D-D92D-482D-9990-718FD1067BEB}.CE|x86.ActiveCfg = CE|x86
+		{169A6F5D-D92D-482D-9990-718FD1067BEB}.CE|x86.Build.0 = CE|x86
+		{169A6F5D-D92D-482D-9990-718FD1067BEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{169A6F5D-D92D-482D-9990-718FD1067BEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{169A6F5D-D92D-482D-9990-718FD1067BEB}.Debug|x86.ActiveCfg = Debug|x86
+		{169A6F5D-D92D-482D-9990-718FD1067BEB}.Debug|x86.Build.0 = Debug|x86
+		{169A6F5D-D92D-482D-9990-718FD1067BEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{169A6F5D-D92D-482D-9990-718FD1067BEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{169A6F5D-D92D-482D-9990-718FD1067BEB}.Release|x86.ActiveCfg = Release|x86
+		{169A6F5D-D92D-482D-9990-718FD1067BEB}.Release|x86.Build.0 = Release|x86
+		{F355EBE2-0433-41DA-96A7-486440057FCA}.CE|Any CPU.ActiveCfg = CE|Any CPU
+		{F355EBE2-0433-41DA-96A7-486440057FCA}.CE|Any CPU.Build.0 = CE|Any CPU
+		{F355EBE2-0433-41DA-96A7-486440057FCA}.CE|x86.ActiveCfg = CE|x86
+		{F355EBE2-0433-41DA-96A7-486440057FCA}.CE|x86.Build.0 = CE|x86
+		{F355EBE2-0433-41DA-96A7-486440057FCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F355EBE2-0433-41DA-96A7-486440057FCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F355EBE2-0433-41DA-96A7-486440057FCA}.Debug|x86.ActiveCfg = Debug|x86
+		{F355EBE2-0433-41DA-96A7-486440057FCA}.Debug|x86.Build.0 = Debug|x86
+		{F355EBE2-0433-41DA-96A7-486440057FCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F355EBE2-0433-41DA-96A7-486440057FCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F355EBE2-0433-41DA-96A7-486440057FCA}.Release|x86.ActiveCfg = Release|x86
+		{F355EBE2-0433-41DA-96A7-486440057FCA}.Release|x86.Build.0 = Release|x86
+		{1D5400CF-8540-439E-AED5-2DAEFB755FB3}.CE|Any CPU.ActiveCfg = CE|Any CPU
+		{1D5400CF-8540-439E-AED5-2DAEFB755FB3}.CE|Any CPU.Build.0 = CE|Any CPU
+		{1D5400CF-8540-439E-AED5-2DAEFB755FB3}.CE|x86.ActiveCfg = CE|x86
+		{1D5400CF-8540-439E-AED5-2DAEFB755FB3}.CE|x86.Build.0 = CE|x86
+		{1D5400CF-8540-439E-AED5-2DAEFB755FB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D5400CF-8540-439E-AED5-2DAEFB755FB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D5400CF-8540-439E-AED5-2DAEFB755FB3}.Debug|x86.ActiveCfg = Debug|x86
+		{1D5400CF-8540-439E-AED5-2DAEFB755FB3}.Debug|x86.Build.0 = Debug|x86
+		{1D5400CF-8540-439E-AED5-2DAEFB755FB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D5400CF-8540-439E-AED5-2DAEFB755FB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D5400CF-8540-439E-AED5-2DAEFB755FB3}.Release|x86.ActiveCfg = Release|x86
+		{1D5400CF-8540-439E-AED5-2DAEFB755FB3}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DFE46CC5-6556-495F-A2F8-B388AB9D1C1D} = {56AE4ABC-248D-4BEA-ACB1-7DA3D3E5350B}
+		{FA6C68E8-EC37-4915-B08C-D0B7E6DD2CF3} = {56AE4ABC-248D-4BEA-ACB1-7DA3D3E5350B}
+		{BFF2EC6A-660D-4A3C-8D6F-06F1D3573BF3} = {4C25EBFF-6AC7-49D2-A5F8-DC76C6F0A3A1}
+		{DA90BEED-01AA-4ED5-AD32-4C904C8E74B8} = {4C25EBFF-6AC7-49D2-A5F8-DC76C6F0A3A1}
+		{D4ECB540-CCB7-4649-BB26-FB071A27F24F} = {4C25EBFF-6AC7-49D2-A5F8-DC76C6F0A3A1}
+		{169A6F5D-D92D-482D-9990-718FD1067BEB} = {4C25EBFF-6AC7-49D2-A5F8-DC76C6F0A3A1}
+		{1D5400CF-8540-439E-AED5-2DAEFB755FB3} = {4C25EBFF-6AC7-49D2-A5F8-DC76C6F0A3A1}
+		{E149D46D-0B0C-4248-9851-8B37DBC85331} = {7825D3F1-FBC7-486E-9872-A26181AD0CD6}
+		{82123438-B491-40CC-BB16-429158AC972A} = {7825D3F1-FBC7-486E-9872-A26181AD0CD6}
+		{09C3BA65-5885-465E-99C6-C06DF0765AB5} = {AA83DB9A-56E0-45CD-A2AE-C93A869161ED}
+		{E02038DD-DA61-4B2B-9D95-6F0C0954FD18} = {AA83DB9A-56E0-45CD-A2AE-C93A869161ED}
+		{44173306-5A9A-474D-990E-6BC698B4A679} = {AA83DB9A-56E0-45CD-A2AE-C93A869161ED}
+		{FEB1E576-80EF-47CC-8DBA-FD71E3FCDBDD} = {AA83DB9A-56E0-45CD-A2AE-C93A869161ED}
+		{665E8352-6DBC-49BD-A349-70D504D097A6} = {AA83DB9A-56E0-45CD-A2AE-C93A869161ED}
+		{F355EBE2-0433-41DA-96A7-486440057FCA} = {47501907-F6F4-4655-83F1-0E9C2A6DA03B}
+		{E304BF10-7721-4F1B-B2BE-A7534688D0ED} = {3B343973-14BC-40A6-A378-E53D60EC7A0B}
+		{BC75A69A-3AA0-459F-B49C-ABADA150648E} = {3B343973-14BC-40A6-A378-E53D60EC7A0B}
+		{6DAEDB08-F757-4BE8-BC8E-875348044B3C} = {3B343973-14BC-40A6-A378-E53D60EC7A0B}
+		{10A937E0-D1E9-4C61-93E9-565F50065B29} = {3B343973-14BC-40A6-A378-E53D60EC7A0B}
+		{CEB0FE5B-7479-4417-B54B-592F899398FD} = {3B343973-14BC-40A6-A378-E53D60EC7A0B}
+		{620B6BA2-1893-4E13-978B-2229EDACF564} = {3B343973-14BC-40A6-A378-E53D60EC7A0B}
+		{E771626C-38EB-4A8A-8FBA-CFD1F5BE6958} = {3B343973-14BC-40A6-A378-E53D60EC7A0B}
+		{C8CFBD32-5FA1-4C89-95F9-6B418D76710E} = {84CDE3AB-BAE1-49D7-9ED1-F1BC747382FA}
+		{BC31AF81-6E44-4FBE-8D62-835E5600DD8C} = {C8CFBD32-5FA1-4C89-95F9-6B418D76710E}
+		{D59888B7-E9E8-4998-8C79-7E87FA9B9965} = {C8CFBD32-5FA1-4C89-95F9-6B418D76710E}
+		{5FA2030C-9AA3-4E1B-940B-78EE20C1E47C} = {C8CFBD32-5FA1-4C89-95F9-6B418D76710E}
+		{0AEE6F92-0574-4BF2-B285-31C4C79CD6FD} = {BC31AF81-6E44-4FBE-8D62-835E5600DD8C}
+		{229C832F-F946-42AB-97EB-D8F1A55AE820} = {0AEE6F92-0574-4BF2-B285-31C4C79CD6FD}
+		{7259E81D-0701-4AA4-A7C6-33B2A7301FC4} = {229C832F-F946-42AB-97EB-D8F1A55AE820}
+	EndGlobalSection
+EndGlobal

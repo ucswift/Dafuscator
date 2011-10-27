@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ed592a78-229e-4a70-8d86-59e0a4c0e02b}</ProjectGuid>
+    <ArchitectureToolsVersion>1.0.0.0</ArchitectureToolsVersion>
+    <Name>ModelingProject1</Name>
+    <RootNamespace>ModelingProject1</RootNamespace>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" />
+  <ItemGroup>
+    <Folder Include="ModelDefinition\" />
+    <Content Include="ModelDefinition\ModelingProject1.uml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Validate Include="LayerDiagram1.layerdiagram">
+      <SubType>Content</SubType>
+    </Validate>
+    <Validate Include="LayerDiagram1.layerdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>LayerDiagram1.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="LayerDiagram1.layerdiagram.suppressions">
+      <SubType>Content</SubType>
+      <DependentUpon>LayerDiagram1.layerdiagram</DependentUpon>
+    </Validate>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Applications\DafuscatorWpf\DafuscatorWpf.csproj">
+      <Name>DafuscatorWpf</Name>
+      <Project>{e149d46d-0b0c-4248-9851-8b37dbc85331}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\Framework\Framework.csproj">
+      <Name>Framework</Name>
+      <Project>{d4ecb540-ccb7-4649-bb26-fb071a27f24f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\Generators.DEMO\Generators.DEMO.csproj">
+      <Name>Generators.DEMO</Name>
+      <Project>{1d5400cf-8540-439e-aed5-2daefb755fb3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\Generators\Generators.csproj">
+      <Name>Generators</Name>
+      <Project>{169a6f5d-d92d-482d-9990-718fd1067beb}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\Model\Model.csproj">
+      <Name>Model</Name>
+      <Project>{bff2ec6a-660d-4a3c-8d6f-06f1d3573bf3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\Services\Services.csproj">
+      <Name>Services</Name>
+      <Project>{da90beed-01aa-4ed5-ad32-4c904c8e74b8}</Project>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

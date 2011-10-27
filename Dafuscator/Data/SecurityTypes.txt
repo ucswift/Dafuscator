@@ -1,0 +1,18 @@
+Bond
+Core
+Agressive
+Balanced
+Growth
+Conservative
+Moderate
+Index
+Value
+Small Cap
+Mid Cap
+Large Cap
+Real Return
+Total Value
+Opportunities
+Tactial
+Value Index
+Diversified

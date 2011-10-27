@@ -1,0 +1,13 @@
+Street
+St.
+Lane
+Ln.
+Court
+Ct.
+Road
+Rd.
+Circle
+Cr.
+Drive
+Dr.
+Way

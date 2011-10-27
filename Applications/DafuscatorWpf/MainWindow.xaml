@@ -1,0 +1,212 @@
+﻿<odc:RibbonWindow x:Class="WaveTech.Dafuscator.WpfApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+				xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:odc="clr-namespace:Odyssey.Controls;assembly=Odyssey" 
+				xmlns:xy="clr-namespace:Odyssey.Controls;assembly=Odyssey" 
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:local="clr-namespace:WaveTech.Dafuscator.WpfApplication"
+        xmlns:conv="clr-namespace:WaveTech.Dafuscator.WpfApplication.Converter" 
+				xmlns:uc="clr-namespace:WaveTech.Dafuscator.WpfApplication.UserControls" xmlns:MessageWindows="clr-namespace:WaveTech.Dafuscator.WpfApplication.UserControls.MessageWindows" x:Name="main"				
+				FontSize="14" FontWeight="Medium"  MinWidth="600" MinHeight="156"  
+				Title="Dafuscator" Height="750" Width="1000" WindowStartupLocation="CenterScreen">
+
+
+	<odc:RibbonWindow.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="DataTemplates.xaml" />
+				<ResourceDictionary Source="ColumnTemplates.xaml" />
+			</ResourceDictionary.MergedDictionaries>
+			<conv:DisplayTypeToVisibleConverter x:Key="typeConverter" />
+		</ResourceDictionary>
+	</odc:RibbonWindow.Resources>
+
+	<Grid>
+		<Grid odc:ImageRenderOptions.LargeImageScalingMode="NearestNeighbor" odc:RibbonChrome.IsGrayScaleEnabled="true"
+			DataContext="{Binding ElementName=main}">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="Auto" />
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+
+			<odc:RibbonBar x:Name="ribbon" Grid.ColumnSpan="2" Grid.Row="0" ShowTitleOnRight="False">
+				<odc:RibbonBar.ApplicationMenu>
+					<odc:RibbonApplicationMenu MenuButtonImage="/img/DafuscatorIcon_48.png" odc:RibbonButton.ImageStretch="Fill" odc:KeyTip.Key="F" Focusable="True">
+						<odc:RibbonApplicationMenu.ToolTip>
+							<odc:RibbonToolTip Title="Application Menu" Description="Click here to save, open or exit." />
+						</odc:RibbonApplicationMenu.ToolTip>
+						<odc:RibbonApplicationMenuItem Header="New" Command="{x:Static local:Commands.NewCommand}"
+                                x:Name="NewMenuItem" Image="img/new_document_32.png" odc:KeyTip.Key="S" />
+						<odc:RibbonApplicationMenuItem Header="Open" Command="{x:Static local:Commands.OpenCommand}"
+                                x:Name="OpenMenuItem" Image="img/open_document_32.png" odc:KeyTip.Key="S" />
+						<odc:RibbonApplicationMenuItem Header="Save" Image="img/save_32.png" Command="{x:Static local:Commands.SaveCommand}"
+                                x:Name="SaveMenuItem" odc:KeyTip.Key="S" />
+						<odc:RibbonApplicationMenuItem Header="Close" Image="img/Close-32x32.png" Command="{x:Static local:Commands.CloseCommand}"
+                                x:Name="CloseMenuItem" odc:KeyTip.Key="C" />
+						<odc:RibbonSeparator />
+						<odc:RibbonApplicationMenuItem Header="Export..." Image="img/Export_32.png" Command="{x:Static local:Commands.ExportAllCommand}"
+                                odc:KeyTip.Key="E">
+							<odc:RibbonApplicationMenuItem.ToolTip>Exports SQL</odc:RibbonApplicationMenuItem.ToolTip>
+						</odc:RibbonApplicationMenuItem>
+						<odc:RibbonApplicationMenu.Footer>
+							<StackPanel HorizontalAlignment="Stretch" Margin="0,4,0,0" Orientation="Horizontal">
+								<odc:OdcButton HorizontalAlignment="Right" Command="{x:Static odc:RibbonWindow.CloseCommand}" odc:KeyTip.Key="X">Exit</odc:OdcButton>
+							</StackPanel>
+						</odc:RibbonApplicationMenu.Footer>
+						<odc:RibbonApplicationMenu.MenuHeaderTemplate>
+							<DataTemplate>
+								<Border Width="320" />
+							</DataTemplate>
+						</odc:RibbonApplicationMenu.MenuHeaderTemplate>
+
+					</odc:RibbonApplicationMenu>
+				</odc:RibbonBar.ApplicationMenu>
+
+				<odc:RibbonBar.QAToolBar>
+					<odc:RibbonQAToolBar>
+					</odc:RibbonQAToolBar>
+				</odc:RibbonBar.QAToolBar>
+
+				<odc:RibbonBar.Tabs>
+					<odc:RibbonTabItem Title="Home" odc:KeyTip.Key="H">
+						<odc:RibbonGroup Title="General" odc:KeyTip.Key="GA">
+
+							<odc:RibbonButton Content="New" MinWidth="54" odc:RibbonBar.MinSize="Medium" odc:KeyTip.Key="S"
+																SmallImage="img/new_document_16.png" LargeImage="img/new_document_32.png"
+                                    Command="{x:Static local:Commands.NewCommand}" />
+
+							<odc:RibbonButton Content="Open" MinWidth="54" odc:RibbonBar.MinSize="Medium" odc:KeyTip.Key="S"
+																SmallImage="img/open_document_16.png" LargeImage="img/open_document_32.png"
+                                    Command="{x:Static local:Commands.OpenCommand}" />
+
+							<odc:RibbonButton Content="Save" MinWidth="54" odc:RibbonBar.MinSize="Medium" odc:KeyTip.Key="S"
+																SmallImage="img/save_16.png" LargeImage="img/save_32.png"
+                                    Command="{x:Static local:Commands.SaveCommand}" />
+
+							<odc:RibbonButton Content="Close" MinWidth="54" odc:RibbonBar.MinSize="Medium" odc:KeyTip.Key="S"
+																SmallImage="img/Close-32x32.png" LargeImage="img/Close-32x32.png"
+                                    Command="{x:Static local:Commands.CloseCommand}" />
+
+						</odc:RibbonGroup>
+
+						<odc:RibbonGroup Title="Project" odc:KeyTip.Key="GA">
+
+							<odc:RibbonButton Content="Refresh" MinWidth="54" odc:RibbonBar.MinSize="Medium" odc:KeyTip.Key="U"
+																SmallImage="img/category_16.png" LargeImage="img/category_32.png"
+                                    Command="{x:Static local:Commands.RefreshCommand}" />
+
+                            <odc:RibbonDropDownButton x:Name="UpdateDropDown" Content="Update" LargeImage="img/Layout_32.png" MinWidth="48"
+                                     odc:RibbonBar.MinSize="Medium" IsEnabled="True">
+                                
+                                <odc:RibbonMenuItem Header="Connection String" Command="{x:Static local:Commands.UpdateConnectionCommand}"
+                                        odc:KeyTip.Key="U" Image="img/Undo_32.png" />
+
+                            </odc:RibbonDropDownButton>
+
+                            <odc:RibbonButton Content="Report" MinWidth="54" odc:RibbonBar.MinSize="Medium" odc:KeyTip.Key="U"
+																SmallImage="img/print_16.png" LargeImage="img/print_32.png"
+                                    Command="{x:Static local:Commands.ReportCommand}" />
+							
+						</odc:RibbonGroup>
+
+						<odc:RibbonGroup Title="Obfuscate" odc:KeyTip.Key="GA">
+
+							<odc:RibbonButton Content="Preview" MinWidth="54" odc:RibbonBar.MinSize="Medium" odc:KeyTip.Key="U"
+																SmallImage="img/Glass_16.png" LargeImage="img/Glass_32.png"
+                                    Command="{x:Static local:Commands.PreviewCommand}" />
+
+
+                            <odc:RibbonDropDownButton x:Name="RunDropDown" Content="Run" LargeImage="img/QuickParts_32.png" MinWidth="48"
+                                     odc:RibbonBar.MinSize="Medium" IsEnabled="True">
+                                <odc:RibbonMenuItem Header="All" Command="{x:Static local:Commands.RunCommand}"
+                                        odc:KeyTip.Key="P" Image="img/QuickParts_32.png" />
+
+                                <odc:RibbonMenuItem Header="Table" Command="{x:Static local:Commands.RunTableCommand}"
+                                        odc:KeyTip.Key="P" Image="img/QuickParts_32.png" />
+                            </odc:RibbonDropDownButton>
+
+                            <odc:RibbonDropDownButton x:Name="ExportDropDown" Content="Export" LargeImage="img/Export_32.png" MinWidth="48"
+                                     odc:RibbonBar.MinSize="Medium" IsEnabled="True">
+								<odc:RibbonMenuItem Header="All" Command="{x:Static local:Commands.ExportAllCommand}"
+                                        odc:KeyTip.Key="P" Image="img/QuickParts_32.png" />
+
+								<odc:RibbonMenuItem Header="Table" Command="{x:Static local:Commands.ExportTableCommand}"
+                                        odc:KeyTip.Key="P" Image="img/QuickParts_32.png" />
+
+                                <odc:RibbonMenuItem Header="All (Test)" Command="{x:Static local:Commands.ExportAllTestCommand}"
+                                        odc:KeyTip.Key="P" Image="img/Export_32.png" />
+
+                                <odc:RibbonMenuItem Header="Table (Test)" Command="{x:Static local:Commands.ExportTableTestCommand}"
+                                        odc:KeyTip.Key="P" Image="img/Export_32.png" />
+                            </odc:RibbonDropDownButton>
+
+
+						</odc:RibbonGroup>
+						
+						<odc:RibbonGroup Title="Help" odc:KeyTip.Key="GA">
+							
+							<odc:RibbonButton Content="Help" MinWidth="54" odc:RibbonBar.MinSize="Medium" odc:KeyTip.Key="U"
+																SmallImage="img/Help_16.png" LargeImage="img/Help_32.png"
+                                    Command="{x:Static local:Commands.HelpCommand}" />
+							
+							<odc:RibbonButton Content="Homepage" MinWidth="54" odc:RibbonBar.MinSize="Medium" odc:KeyTip.Key="U"
+																SmallImage="img/Home_16.png" LargeImage="img/Home_32.png"
+                                    Command="{x:Static local:Commands.HomeCommand}" />
+							
+							<odc:RibbonButton Content="About" MinWidth="54" odc:RibbonBar.MinSize="Medium" odc:KeyTip.Key="U"
+																SmallImage="img/About_16.png" LargeImage="img/About_32.png"
+                                    Command="{x:Static local:Commands.AboutCommand}" />
+							
+						</odc:RibbonGroup>
+
+					</odc:RibbonTabItem>
+
+				</odc:RibbonBar.Tabs>
+				<odc:RibbonBar.ContextualTabSets>
+
+				</odc:RibbonBar.ContextualTabSets>
+			</odc:RibbonBar>
+
+			<odc:OutlookBar x:Name="outlook" Grid.Row="1" Grid.Column="0" Width="250" ShowButtons="True" MaxWidth="400" ShowSideButtons="True"
+                    odc:KeyTip.Key="OX" SelectedSectionIndex="{Binding SectionIndex, ElementName=main}" Margin="4,2,0,4">
+				<odc:OutlookBar.Sections>
+
+					<odc:OutlookSection Header="Explorer" Image="/img/Glass_32.png" odc:KeyTip.Key="SP">
+						<Grid>
+							<Grid.RowDefinitions>
+								<RowDefinition Height="Auto" />
+								<RowDefinition Height="*" />
+							</Grid.RowDefinitions>
+							<odc:OdcExpander Header="Tables" Padding="0" Grid.Row="1" VerticalAlignment="Stretch" Image="/img/category_16.png"
+                                    odc:KeyTip.Key="EC">
+								<TreeView x:Name="tablesTree" Margin="0" Padding="4" odc:KeyTip.Key="SC"
+                                        ItemsSource="{Binding Source={StaticResource databaseData}, Path=Tables}" 
+																				ItemTemplate="{StaticResource tableItemTemplate}"
+                                        BorderThickness="0"
+																				SelectedItemChanged="OnSelectedTableChanged"
+																				PreviewMouseDown="tablesTree_PreviewMouseDown">
+
+								</TreeView>
+							</odc:OdcExpander>
+						</Grid>
+					</odc:OutlookSection>
+
+				</odc:OutlookBar.Sections>
+			</odc:OutlookBar>
+
+			<uc:ColumnsGrid x:Name="ColumnsGrid" Visibility="Hidden" Grid.Column="1" Grid.Row="1" Focusable="False"
+                    SelectedTable="{Binding SelectedTable, ElementName=main, Mode=TwoWay}" />
+
+		</Grid>
+
+		<MessageWindows:NewWindow x:Name="newWindow" Visibility="Collapsed" CancelButtonClick="newWindow_CancelButtonClick" 
+															ConnectButtonClick="newWindow_ConnectButtonClick" />
+		
+		<uc:LoadingAnimationLarge x:Name="loadingAnimation" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed" />
+	</Grid>
+
+</odc:RibbonWindow>

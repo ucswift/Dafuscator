@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="e1e811bf-4bd9-48a3-a381-7d48fe6cf0cc" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="bbb67380-4813-4d2c-ae5c-5fe4a6439dcf" name="DafuscatorWpf">
+      <references>
+        <reference Id="83ee8eee-e208-4a2c-834c-4616839116e7" name="DafuscatorWpf">
+          <ArtifactNode Label="DafuscatorWpf" Category="CodeSchema_Project" Id="(Assembly=../Applications/DafuscatorWpf/DafuscatorWpf.csproj)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Dafuscator)" Label="Dafuscator.exe" Category="FileSystem.Category.FileOfType.exe">
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="c68752ed-f40a-47ed-a2b1-d6fd791653c9" name="Layer1">
+      <references>
+        <reference Id="1f2cdd98-fad8-460e-8801-e8bcfdab8e86" name="Framework">
+          <ArtifactNode Label="Framework" Category="CodeSchema_Project" Id="(Assembly=../Core/Framework/Framework.csproj)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=WaveTech.Dafuscator.Framework)" Label="WaveTech.Dafuscator.Framework.dll" Category="FileSystem.Category.FileOfType.dll">
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="06e904a4-16f0-4384-a40c-65fd14cb02fa" name="Model">
+          <ArtifactNode Label="Model" Category="CodeSchema_Project" Id="(Assembly=../Core/Model/Model.csproj)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=WaveTech.Dafuscator.Model)" Label="WaveTech.Dafuscator.Model.dll" Category="FileSystem.Category.FileOfType.dll">
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="ead62144-5466-40e3-81c1-3a41d5ebca6b" name="Generators.DEMO">
+          <ArtifactNode Label="Generators.DEMO" Category="CodeSchema_Project" Id="(Assembly=../Core/Generators.DEMO/Generators.DEMO.csproj)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=WaveTech.Dafuscator.Generators)" Label="WaveTech.Dafuscator.Generators.dll" Category="FileSystem.Category.FileOfType.dll">
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="25a2154c-0b46-4aba-b3dd-5c67b9f714ac" name="Services">
+          <ArtifactNode Label="Services" Category="CodeSchema_Project" Id="(Assembly=../Core/Services/Services.csproj)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=WaveTech.Dafuscator.Services)" Label="WaveTech.Dafuscator.Services.dll" Category="FileSystem.Category.FileOfType.dll">
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="60f4c0c1-370b-49e0-9e1c-3c4e2292a9aa" name="Generators">
+          <ArtifactNode Label="Generators" Category="CodeSchema_Project" Id="(Assembly=../Core/Generators/Generators.csproj)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=WaveTech.Dafuscator.Generators)" Label="WaveTech.Dafuscator.Generators.dll" Category="FileSystem.Category.FileOfType.dll">
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+  </layers>
+</layerModel>
