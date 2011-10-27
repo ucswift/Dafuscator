@@ -35,86 +35,86 @@ Z
 Real city names from the United States 
 Truesdale 
 
-*Company Name 
+* Company Name 
 Generates a real looking company name with optional suffix (Inc, LLC, PLC, etc) 
 Microcada L.L.C. 
 
-*Country 
+* Country 
 Real country names 
 Honduras 
 
-*Date 
+* Date 
 Generate a random date within a range 
 10/5/1986 
 
-*Email Address 
+* Email Address 
 Real looking email address 
 pBlevins@Ventureloft.net 
 
-*First Name 
+* First Name 
 String 
 Cori 
 
-*Last Name 
+* Last Name 
 String 
 Pressman 
 
-*Login 
+* Login 
 Unique, realistic login name generator 
 AObando187 
 
-*Number 
+* Number 
 Random Number Generator 
 19875 
 
-*Phone Number 
+* Phone Number 
 Phone number generator with optional area code 
 597-458-1974 
 
-*Social Security Number 
+* Social Security Number 
 Generates an invalid, but real looking SSN 
 937-58-0360 
 
-*State 
+* State 
 Real state names 
 Nevada 
 
-*String 
+* String 
 Random Strings (Character, Numbers and Special Characters) 
 eFRmdMGj 
 
-*Url 
+* Url 
 Top Level Domain Url generator, human readable and real looking 
 www.Graynet.org 
 
-*Zip Code (Postal Code) 
+* Zip Code (Postal Code) 
 Zip codes and optional 4 digit suffix 
 23341-1377 
 
-*Clear (Eraser) 
+* Clear (Eraser) 
 Replaces data with empty strings or NULL 
 ""/NULL 
 
-*Full Name 
+* Full Name 
 Full real name with optional middle initial or full middle name 
 Maira Nidia Lamothe 
 
-*Stock Symbol 
+* Stock Symbol 
 Real stock symbol generator from multiple exchanges (Equities, Indexes, ETF's, Funds) 
 ASCRX 
 
-*Stock Name 
+* Stock Name 
 Equity, Index, ETF and Fund names from multiple exchanges 
 Lodgian Inc. 
 
-*Hex 
+* Hex 
 Random Hex Generator 
 0xF31A59D 
 
-*Guid 
+* Guid 
 Random Guid Generator 
 {21EC2020-3AEA-1069-A2DD-08002B30309D} 
 
-*Token 
+* Token 
 Generates a string given a user supplied pattern 
 {random}
