@@ -20,7 +20,7 @@ namespace WaveTech.Dafuscator.Generators
 
 		public Type Type
 		{
-			get { return typeof(IFirstNameGenerator); }
+			get { return typeof(IFullNameGenerator); }
 		}
 
 		public List<OleDbType> CompatibleDataTypes

@@ -20,7 +20,7 @@
     </SccAuxPath>
     <SccProvider>
     </SccProvider>
-    <ApplicationIcon>DafuscatorIcon.ico</ApplicationIcon>
+    <ApplicationIcon>DFIcon.ico</ApplicationIcon>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\..\Common\Dafuscator-PubPriv-KeyFile.snk</AssemblyOriginatorKeyFile>
     <FileUpgradeFlags>
@@ -198,9 +198,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DafuscatorIcon.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="..\..\Common\Dafuscator-PubPriv-KeyFile.snk">
       <Link>Dafuscator-PubPriv-KeyFile.snk</Link>
     </None>
@@ -225,6 +222,9 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DFIcon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -14,10 +14,15 @@ Dafuscator was developed in cooperation with Online Advisors, Inc. (<http://www.
 
 * **WaveTech's Home page:** <http://www.wtdt.com>
 * **Dafuscator's Home Page:** <http://www.dafuscator.com>
+* **Dafuscator's Codeplex:** <http://dafuscator.codeplex.com/>
 
 ## Prerequisites
 
 You will need the .Net Framework 4 and Database to use Dafuscator.
+
+## Downloading Builds
+
+You can download a installer for Dafuscator at either WaveTech's website or CodePlex.
 
 ## Provided Generators
 

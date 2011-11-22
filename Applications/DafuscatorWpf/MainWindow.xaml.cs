@@ -73,13 +73,7 @@ namespace WaveTech.Dafuscator.WpfApplication
 		#region Private Members
 		private void Initialize()
 		{
-
-
-
 			RefreshData();
-
-			// TODO: Remove me!
-			//ColumnsGrid.Visibility = Visibility.Visible;
 		}
 
 		public void RefreshData()
@@ -100,11 +94,7 @@ namespace WaveTech.Dafuscator.WpfApplication
 
 		private void SetWindowTitle()
 		{
-#if CE
-			this.Title = "Dafuscator (Community Edition)";
-#else
-			this.Title = "Dafuscator (Professional Edition)";
-#endif
+			this.Title = "Dafuscator";
 		}
 		#endregion Private Members
 
@@ -220,7 +210,6 @@ namespace WaveTech.Dafuscator.WpfApplication
 				worker.RunWorkerAsync(newWindow.GetConnectionString());
 			}
 		}
-		#endregion Private Event Handlers
 
 		private void tablesTree_PreviewMouseDown(object sender, MouseButtonEventArgs e)
 		{
@@ -236,5 +225,6 @@ namespace WaveTech.Dafuscator.WpfApplication
 				}
 			}
 		}
+		#endregion Private Event Handlers
 	}
 }

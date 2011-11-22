@@ -340,9 +340,6 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="DafuscatorIcon.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\..\Core\Framework\Framework.csproj">
       <Project>{D4ECB540-CCB7-4649-BB26-FB071A27F24F}</Project>
       <Name>Framework</Name>
@@ -499,6 +496,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="img\Close-32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="DafuscatorIcon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

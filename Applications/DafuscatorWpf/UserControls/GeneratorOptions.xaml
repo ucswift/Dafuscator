@@ -30,7 +30,7 @@
 			</Grid.RowDefinitions>
 			
 			<Label Grid.Column="0" Grid.Row="0" Content="Include Digits:" />
-			<CheckBox Grid.Column="1" Grid.Row="0" x:Name="characterGenerator_IncludeDigits" VerticalAlignment="Center"
+			<CheckBox Grid.Column="1" Grid.Row="0" x:Name="characterGenerator_IncludeDigits" VerticalAlignment="Center" IsThreeState="False"
 								IsChecked="{Binding Column, Path=GeneratorData[0] }" Click="characterGenerator_IncludeDigits_Click">
 			</CheckBox>
 		</Grid>
@@ -79,7 +79,7 @@
 			</Grid.RowDefinitions>
 
 			<Label Grid.Column="0" Grid.Row="0" Content="Include Area Code:" />
-			<CheckBox Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" x:Name="phoneNumberGenerator_IncludeAreaCode" IsChecked="{Binding Column, Path=GeneratorData[0] }" />
+			<CheckBox Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" x:Name="phoneNumberGenerator_IncludeAreaCode" IsThreeState="False" IsChecked="{Binding Column, Path=GeneratorData[0] }" />
 		</Grid>
 			
 		<Grid Grid.Row="0" x:Name="StringGeneratorOptionsGrid" Focusable="False">
@@ -101,10 +101,10 @@
 			<TextBox x:Name="stringGenerator_MaxLength" Grid.Column="1" Grid.Row="1" Margin="4,4,4,4" Text="{Binding Column, Path=GeneratorData[1] }" KeyUp="stringGenerator_MaxLength_KeyUp" />
 
 			<Label Grid.Column="0" Grid.Row="2" Content="Include Numbers:" />
-			<CheckBox Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" x:Name="stringGenerator_IncludeNumbers" IsChecked="{Binding Column, Path=GeneratorData[2] }" Click="stringGenerator_IncludeNumbers_Click" />
+			<CheckBox Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" x:Name="stringGenerator_IncludeNumbers" IsThreeState="False" IsChecked="{Binding Column, Path=GeneratorData[2] }" Click="stringGenerator_IncludeNumbers_Click" />
 			
 			<Label Grid.Column="0" Grid.Row="3" Content="Special Characters:" />
-			<CheckBox Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" x:Name="stringGenerator_IncludeSpecialCharacters" IsChecked="{Binding Column, Path=GeneratorData[3] }" Click="stringGenerator_IncludeSpecialCharacters_Click" />
+			<CheckBox Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" x:Name="stringGenerator_IncludeSpecialCharacters" IsThreeState="False" IsChecked="{Binding Column, Path=GeneratorData[3] }" Click="stringGenerator_IncludeSpecialCharacters_Click" />
 		</Grid>
 
 		<Grid Grid.Row="0" x:Name="ZipCodeGeneratorOptionsGrid" Focusable="False">
@@ -117,7 +117,7 @@
 			</Grid.RowDefinitions>
 
 			<Label Grid.Column="0" Grid.Row="0" Content="Include 4 Digit Suffix:" />
-			<CheckBox Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" x:Name="zipCodeGenerator_Include4Digits" IsChecked="{Binding Column, Path=GeneratorData[0] }" />
+			<CheckBox Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" x:Name="zipCodeGenerator_Include4Digits" IsThreeState="False" IsChecked="{Binding Column, Path=GeneratorData[0] }" />
 		</Grid>
 		
 		<Grid Grid.Row="0" x:Name="ClearGeneratorOptionsGrid" Focusable="False">
@@ -130,13 +130,13 @@
 			</Grid.RowDefinitions>
 
 			<Label Grid.Column="0" Grid.Row="0" Content="Use Null Instead:" />
-			<CheckBox Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" x:Name="clearGenerator_UseNullInstead" IsChecked="{Binding Column, Path=GeneratorData[0] }" />
+			<CheckBox Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" x:Name="clearGenerator_UseNullInstead" IsThreeState="False" IsChecked="{Binding Column, Path=GeneratorData[0] }" />
 		</Grid>
 		
 		<Grid Grid.Row="0" x:Name="FullNameGeneratorOptionsGrid" Focusable="False">
 			<Grid.ColumnDefinitions>
-				<ColumnDefinition/>
-				<ColumnDefinition/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="25px"/>
 			</Grid.ColumnDefinitions>
 			<Grid.RowDefinitions>
 				<RowDefinition />
@@ -144,10 +144,10 @@
 			</Grid.RowDefinitions>
 
 			<Label Grid.Column="0" Grid.Row="0" Content="Include Middle (Name/Init):" />
-			<CheckBox Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" x:Name="fullNameGenerator_IncludeMiddle" IsChecked="{Binding Column, Path=GeneratorData[0] }" />
+			<CheckBox Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" x:Name="fullNameGenerator_IncludeMiddle" IsThreeState="False" IsChecked="{Binding Column, Path=GeneratorData[0] }" />
 			
 			<Label Grid.Column="0" Grid.Row="1" Content="Full Name Middle:" />
-			<CheckBox Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" x:Name="fullNameGenerator_FullNameMiddle" IsChecked="{Binding Column, Path=GeneratorData[1] }" />
+			<CheckBox Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" x:Name="fullNameGenerator_FullNameMiddle" IsThreeState="False" IsChecked="{Binding Column, Path=GeneratorData[1] }" />
 		</Grid>
 
     <Grid Grid.Row="0" x:Name="TokenGeneratorOptionsGrid" Focusable="False">
